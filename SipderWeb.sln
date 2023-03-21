@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Desktop
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SpiderWeb", "SpiderWeb\SpiderWeb.vbproj", "{28C0468F-42E1-4C04-8B42-9189A777CF17}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ED55014A-A75B-4A10-ADDA-86283157958B} = {ED55014A-A75B-4A10-ADDA-86283157958B}
+		{D3B04FE4-7E4A-49E3-A666-A4EE7ECD127F} = {D3B04FE4-7E4A-49E3-A666-A4EE7ECD127F}
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SpiderWebLibrary", "SpiderWebLibrary\SpiderWebLibrary.vbproj", "{ED55014A-A75B-4A10-ADDA-86283157958B}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SpiderWebTest", "SpiderWebTest\SpiderWebTest.vbproj", "{3956BFCF-E893-4262-9189-3D01E0E4DDFF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ED55014A-A75B-4A10-ADDA-86283157958B} = {ED55014A-A75B-4A10-ADDA-86283157958B}
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GH_SpiderWebLibrary", "GH_SpiderWebLibrary\GH_SpiderWebLibrary.vbproj", "{D3B04FE4-7E4A-49E3-A666-A4EE7ECD127F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28C0468F-42E1-4C04-8B42-9189A777CF17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28C0468F-42E1-4C04-8B42-9189A777CF17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28C0468F-42E1-4C04-8B42-9189A777CF17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28C0468F-42E1-4C04-8B42-9189A777CF17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED55014A-A75B-4A10-ADDA-86283157958B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED55014A-A75B-4A10-ADDA-86283157958B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED55014A-A75B-4A10-ADDA-86283157958B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED55014A-A75B-4A10-ADDA-86283157958B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3956BFCF-E893-4262-9189-3D01E0E4DDFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3956BFCF-E893-4262-9189-3D01E0E4DDFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3956BFCF-E893-4262-9189-3D01E0E4DDFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3956BFCF-E893-4262-9189-3D01E0E4DDFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3B04FE4-7E4A-49E3-A666-A4EE7ECD127F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3B04FE4-7E4A-49E3-A666-A4EE7ECD127F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3B04FE4-7E4A-49E3-A666-A4EE7ECD127F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3B04FE4-7E4A-49E3-A666-A4EE7ECD127F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,1899 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SpiderWebLibrary
+</name>
+</assembly>
+<members>
+<member name="M:SpiderWebLibrary.graphRepresentaions.graphVertexList.#ctor">
+	<summary>
+  Construct a empty Graph represented by a list of graphVertex.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphVertexList.#ctor(SpiderWebLibrary.graphRepresentaions.Graph)">
+	<summary>
+ Construct a Graph represented by a list of graphVertex, from another Graph.
+ </summary>
+	<param name="G">Object, implementing the Graph interface.</param>
+	<remarks>Computes in O(n), where n is the number of graphVertex in the Graph.</remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphVertexList.#ctor(System.Collections.Generic.List{SpiderWebLibrary.graphElements.graphVertex})">
+	<summary>
+ Construct a Graph represented by a list of graphVertex, from a List(of graphVertex)
+ </summary>
+	<param name="tmpVertexList"></param>
+	<remarks>The List(of graphVertex) will be sorted  befor adding the vertices to the Graph. 
+ On Average this computes in O(n log n), where n is the number of graphVertex in the Graph.
+ If your are constructing the Graph from an existing Graph (G) use:
+ <code>
+ new graphVertex(G)
+ </code>
+	</remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphVertexList.#ctor(SpiderWebLibrary.graphElements.graphVertex)">
+	<summary>
+ Construct a Graph represented by a list of graphVertex and inserts the gV.
+ </summary>
+	<param name="gV"></param>
+	<remarks>Constructs a Graph where the vertexCount-1 = gV.index</remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphVertexList.#ctor(System.Int32)">
+	<summary>
+ Construct a Graph represented by a list of graphVertex.
+ </summary>
+	<param name="vertices"></param>
+	<remarks>Constructs a Graph where the vertexCount-1 = vertices</remarks>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.graphVertexList.split_tAt(System.Double,System.Collections.Generic.List{System.Double})">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.graphVertexList.tAt(System.Double,System.Collections.Generic.List{System.Double})">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.graphVertexList.graphEdgeAt(System.Double,System.Collections.Generic.List{System.Double})">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.graphVertexList.graphEdgeIndexAt(System.Double,System.Collections.Generic.List{System.Double})">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.graphVertexList.negativeCost(System.Double)">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.graphVertexList.vertexCount">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.graphVertexList.edgeCount">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.graphVertexList.getVertexList">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.graphVertexList.getEdgeList">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.graphVertexList.getInEdges(System.Int32)">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.graphVertexList.getOutEdges(System.Int32)">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.graphVertexList.getInNB(System.Int32)">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.graphVertexList.getOutNB(System.Int32)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphVertexList.union(SpiderWebLibrary.graphRepresentaions.Graph)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphVertexList.insert(SpiderWebLibrary.graphElements.graphVertex)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphVertexList.insert(SpiderWebLibrary.graphElements.graphEdge)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphVertexList.add(SpiderWebLibrary.graphElements.graphEdge)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphVertexList.add(SpiderWebLibrary.graphElements.graphVertex)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphVertexList.clear">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphVertexList.delete(System.Int32)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphVertexList.delete(System.Collections.Generic.List{System.Int32})">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphVertexList.delete(SpiderWebLibrary.graphElements.graphEdge)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphVertexList.delete(SpiderWebLibrary.graphElements.graphVertex)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphVertexList.subGraph(System.Collections.Generic.List{System.Int32})">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphVertexList.ensureUndirected">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphVertexList.simplify">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphVertexList.dualGraph">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphVertexList.dualVertexGraph">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphVertexList.Item(System.Int32)">
+	<summary>
+ Retrieve a graphVertex from the graphVertexList.
+ </summary>
+	<param name="i">index of the graphVertex</param>
+	<returns>Returns the specified graphVertex otherwise an inValid graphVertex.</returns>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphVertexList.Median(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Callcualtes the median neighbouring values for each graphVertex in the graphVertexList.
+ </summary>
+	<param name="Values"></param>
+	<returns>Returns the median values.</returns>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphVertexList.Average(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Callcualtes the average neighbouring values for each graphVertex in the graphVertexList.
+ </summary>
+	<param name="Values"></param>
+	<returns>Returns the average values</returns>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphVertexList.POI(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Finds all Points of Interest of a graphVertexList. 
+ A graphVertex is a POI if the values of the neighbours are larger or equals to the value of the graphVertex. 
+ </summary>
+	<param name="Values">The number of elements has to be the same as the number graphVertex in the graphVertexList.</param>
+	<returns>Returns the indices of the POI as List(of Integer).</returns>
+	<remarks></remarks>
+</member><member name="T:SpiderWebLibrary.graphRepresentaions.graphVertexList">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class   : graphVertexList
+ 
+ <summary>
+ Vertex List representation of a Graph.
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   22/11/2013 created
+ </history>
+</member><member name="M:SpiderWebLibrary.graphTools.BFS.#ctor">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.BFS.#ctor(SpiderWebLibrary.graphRepresentaions.Graph)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.BFS.#ctor(System.Collections.Generic.List{SpiderWebLibrary.graphElements.graphVertex})">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.BFS.#ctor(SpiderWebLibrary.graphElements.graphVertex)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.BFS.#ctor(System.Int32)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.BFS.find(System.Int32,System.Double)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.BFS.findALL(System.Int32,System.Double)">
+	<inheritdoc/>
+</member><member name="T:SpiderWebLibrary.graphTools.BFS">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class   : BreadthFirstSearch
+ 
+ <summary>
+ Uses Vertex List representation to run "Breadth First Search".
+ Constructs a Graph with edges pointing to the predecessor of each vertex.
+ Uses searchGraph as a base class and overloads find / findAll methodes
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   22/11/2013 created
+ [Richard Schaffranek]   03/03/2014 modified
+ </history>
+</member><member name="P:SpiderWebLibrary.graphTools.graphTree.isValidTree">
+	<summary>
+ Tests if the given Graph is a valid tree.
+ </summary>
+	<returns>Return true if the Graph is a tree, otherwise false</returns>
+	<remarks></remarks>
+</member><member name="T:SpiderWebLibrary.graphTools.graphTree">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Interface   : graphTree
+ 
+ <summary>
+	</summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   22/11/2013 created
+ </history>
+</member><member name="F:SpiderWebLibrary.graphRepresentaions.visualGraph.grid">
+	<summary>
+ State (invalid, solid, void) of gridCell as Integer(x)(y)
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SpiderWebLibrary.graphRepresentaions.visualGraph.direction">
+	<summary>
+ All possible viewing directions.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SpiderWebLibrary.graphRepresentaions.visualGraph.State">
+	<summary>
+ representation of the possible states of each graphVertex / gridCell
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.visualGraph.#ctor">
+	<summary>
+ Construct an invalid visualGraph
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.visualGraph.#ctor(System.Int32,System.Int32)">
+	<summary>
+ Construct a new visualGraph
+ </summary>
+	<param name="w">Width of the grid (x)</param>
+	<param name="h">Height of the grid (y)</param>
+	<remarks>Will set all gridCells to State.void</remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.visualGraph.#ctor(SpiderWebLibrary.graphRepresentaions.visualGraph)">
+	<summary>
+ Construct a new visualGraph.
+ </summary>
+	<param name="gV">Existing visualGraph</param>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.visualGraph.gridCell(System.Int32,System.Int32)">
+	<summary>
+ Change the State of a graphVertex / gridCell
+ </summary>
+	<param name="x">x coordinate in the grid</param>
+	<param name="y">y coordinate in the grid</param>
+	<value>If x, y are larger than the grid, nothing happens.</value>
+	<returns>Returns the state of the specified gridCell if x or yare larger than the grid, State.invalid will be returned</returns>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.visualGraph.gridCell(System.Int32)">
+	<summary>
+ Change the State of a graphVertex / gridCell
+ </summary>
+	<param name="p">position in the grid</param>
+	<value>If p is larger than the width*height or smaller than 0, nothing happens.</value>
+	<returns>Returns the state of the specified gridCell if p is not within the grid, State.invalid will be returned</returns>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.visualGraph.gridCell">
+	<summary>
+ Get the States of the visualGraphGrid
+ </summary>
+	<value></value>
+	<returns>Returns a (x)(y) Integer Array</returns>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.visualGraph.gridCellList">
+	<summary>
+ Get the States of the visualGraphGrid
+ </summary>
+	<value></value>
+	<returns>Returns the States as List</returns>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.visualGraph.width">
+	<summary>
+ Get the width of the visualGraphGrid
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.visualGraph.height">
+	<summary>
+ Get the height of the visualGraphGrid
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.visualGraph.area(System.Int32)">
+	<summary>
+ Calculate the visible area from a point
+ </summary>
+	<param name="p">graphVertex of the visualGraph</param>
+	<value></value>
+	<returns>Returns the number of gridCells (= the outDegree of the graphVertex) visible from the sepcified position.</returns>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.visualGraph.recursive(System.Int32,System.Int32)">
+	<summary>
+ Construct a visualGraph from the specified x,y coordinates.
+ </summary>
+	<param name="sX">x coordinate in the grid</param>
+	<param name="sY">y coordinate in the grid</param>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.visualGraph.recursiveAll">
+	<summary>
+ Constructs the complete visualGraph.
+ </summary>
+	<remarks>Will call recursive(x,y) form all possible coordinates of the grid</remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.visualGraph.setup(System.Int32,System.Int32)">
+	<summary>
+ Setup visualGraphGrid
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.visualGraph.castRecursive(System.Int32,System.Int32,System.Int32,System.Double,System.Double,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Construct a visualGraph in one of eight possible directions
+ </summary>
+	<param name="sX">x coordinate in the grid</param>
+	<param name="sY">y coordinate in the grid</param>
+	<param name="row">current row in the shadow casting</param>
+	<param name="s">starting angle</param>
+	<param name="e">end angle</param>
+	<param name="xx">xx direction</param>
+	<param name="xy">yy direction</param>
+	<param name="yx">yx direction</param>
+	<param name="yy">yy direction</param>
+	<remarks></remarks>
+</member><member name="T:SpiderWebLibrary.graphRepresentaions.visualGraph">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class   : visualGraph
+ 
+ <summary>
+ Preforms recursiveShadowCasting to generate a visualGraph
+ </summary>
+	<remarks>
+ This implementation is based on a Java implementation by Eben Howard:
+ http://www.roguebasin.com/index.php?title=FOV_using_recursive_shadowcasting_-_improved
+ </remarks>
+	<history>
+ [Richard Schaffranek]   06/03/2014 created
+ </history>
+</member><member name="M:SpiderWebLibrary.graphTools.DFS.#ctor">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.DFS.#ctor(SpiderWebLibrary.graphRepresentaions.Graph)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.DFS.#ctor(System.Collections.Generic.List{SpiderWebLibrary.graphElements.graphVertex})">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.DFS.#ctor(SpiderWebLibrary.graphElements.graphVertex)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.DFS.#ctor(System.Int32)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.DFS.find(System.Int32,System.Double)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.DFS.findALL(System.Int32,System.Double)">
+	<inheritdoc/>
+</member><member name="T:SpiderWebLibrary.graphTools.DFS">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class   : DeapthFirstSearch
+ 
+ <summary>
+ Uses Vertex List representation to run "Depth First Search".
+ Constructs a Graph with edges pointing to the predecessor of each vertex.
+ uses searchGraph as a base class and overloads find / findAll methodes
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   22/11/2013 created
+ [Richard Schaffranek]   03/03/2014 modified
+ </history>
+</member><member name="M:SpiderWebLibrary.graphTools.SSSP.#ctor">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.SSSP.#ctor(SpiderWebLibrary.graphRepresentaions.Graph)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.SSSP.#ctor(System.Collections.Generic.List{SpiderWebLibrary.graphElements.graphVertex})">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.SSSP.#ctor(SpiderWebLibrary.graphElements.graphVertex)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.SSSP.#ctor(System.Int32)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.SSSP.find(System.Int32,System.Double)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.SSSP.findALL(System.Int32,System.Double)">
+	<inheritdoc/>
+</member><member name="T:SpiderWebLibrary.graphTools.SSSP">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class   : SingleSourceShortestPath
+ 
+ <summary>
+ Uses Vertex List representation to compute the Single Source Shortest Path.
+ Constructs a Graph with edges pointing to the predecessor of each vertex.
+ Uses searchGraph as a base class and overloads find / findAll methodes
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   22/11/2013 created
+ </history>
+</member><member name="T:SpiderWebLibrary.clustering.WARD">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class   : UPGMA
+ 
+ <summary>
+ Clustering
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   20/08/2014 created
+ </history>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphEdgeList.#ctor">
+	<summary>
+  Construct a empty Graph represented by a list of graphEdges.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphEdgeList.#ctor(SpiderWebLibrary.graphRepresentaions.Graph)">
+	<summary>
+ Construct a Graph represented by a list of graphEdges, from another Graph.
+ </summary>
+	<param name="G">Graph implementing the Graph interface.</param>
+	<remarks>Computes in O(n), where n is the number of graphEdges in the Graph.</remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphEdgeList.#ctor(SpiderWebLibrary.graphElements.graphEdge)">
+	<summary>
+ Construct a Graph represented by a list of graphEdges and inserts the gE.
+ </summary>
+	<param name="gE"></param>
+	<remarks>
+	</remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphEdgeList.#ctor(System.Collections.Generic.List{SpiderWebLibrary.graphElements.graphEdge})">
+	<summary>
+ Construct a Graph represented by a list of graphEdges, from a List(of graphEdge)
+ </summary>
+	<param name="tmpEdgeList"></param>
+	<remarks>The List(of graphEdge) will be sorted  befor adding the edges to the Graph. 
+ On Average this computes in O(n log n), where n is the number of graphEdges in the Graph.
+ If your are constructing the Graph from an existing Graph (G) use:
+ <code>
+ new graphEdgeList(G)
+ </code>
+	</remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphEdgeList.ToString">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.graphEdgeList.split_tAt(System.Double,System.Collections.Generic.List{System.Double})">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.graphEdgeList.tAt(System.Double,System.Collections.Generic.List{System.Double})">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.graphEdgeList.graphEdgeAt(System.Double,System.Collections.Generic.List{System.Double})">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.graphEdgeList.graphEdgeIndexAt(System.Double,System.Collections.Generic.List{System.Double})">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.graphEdgeList.edgeCount">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.graphEdgeList.vertexCount">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.graphEdgeList.negativeCost(System.Double)">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.graphEdgeList.getInEdges(System.Int32)">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.graphEdgeList.getOutEdges(System.Int32)">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.graphEdgeList.getInNB(System.Int32)">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.graphEdgeList.getOutNB(System.Int32)">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.graphEdgeList.getEdgeList">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.graphEdgeList.getVertexList">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphEdgeList.union(SpiderWebLibrary.graphRepresentaions.Graph)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphEdgeList.insert(SpiderWebLibrary.graphElements.graphVertex)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphEdgeList.insert(SpiderWebLibrary.graphElements.graphEdge)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphEdgeList.add(SpiderWebLibrary.graphElements.graphEdge)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphEdgeList.add(SpiderWebLibrary.graphElements.graphVertex)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphEdgeList.clear">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphEdgeList.delete(System.Int32)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphEdgeList.delete(System.Collections.Generic.List{System.Int32})">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphEdgeList.delete(SpiderWebLibrary.graphElements.graphEdge)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphEdgeList.delete(SpiderWebLibrary.graphElements.graphVertex)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphEdgeList.subGraph(System.Collections.Generic.List{System.Int32})">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphEdgeList.ensureUndirected">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphEdgeList.simplify">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphEdgeList.dualGraph">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphEdgeList.dualVertexGraph">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphEdgeList.Merge(SpiderWebLibrary.graphElements.graphEdge,SpiderWebLibrary.graphElements.graphEdge)">
+	<overloads>
+ Merge two GrapEdges.
+ </overloads>
+	<summary>
+ Merge two GrapEdges.
+ </summary>
+	<param name="gE1">GraphEdge 1</param>
+	<param name="gE2">GraphEdge 2</param>
+	<returns>Returns true if successful adding the new graphEdge, also if the resulting graphEdge allready exists within the graphEdgeList.</returns>
+	<remarks>Merges two GraphEdges and adds the new Edge to the List. Delets the original GraphEdges.</remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphEdgeList.find(SpiderWebLibrary.graphElements.graphEdge)">
+	<summary>
+ Retrieves a specific GraphEdge from a List
+ </summary>
+	<param name="gE"></param>
+	<returns>Returns the index of the GraphEdge within the List. If the GraphEdge isn't found returns a negative number.</returns>
+	<remarks>Uses BinarySearch to find the GraphEdge. List must be sorted.</remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphEdgeList.seperateEdge(SpiderWebLibrary.graphElements.graphEdge,System.Int32,System.Double)">
+	<summary>
+ tries to seperate a GraphEdge into two.
+ </summary>
+	<param name="gE">GraphEdge to Split</param>
+	<param name="nI">Vertex to insert.</param>
+	<param name="t">Split at t</param>
+	<returns>Return true if succesful, false if the Edge doesn't exist.</returns>
+	<remarks>Splits a GraphEdge into two Edges. Removes the GraphEdge from the List and inserts the newly generated Edge.</remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphEdgeList.Item(System.Int32)">
+	<summary>
+ Retrieve a graphEdge from the graphEdgeList.
+ </summary>
+	<param name="i">index of the graphEdge</param>
+	<returns>Returns the specified graphEdge otherwise an inValid graphEdge.</returns>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphEdgeList.flipEdges(System.Collections.Generic.List{System.Int32})">
+	<summary>
+ Flips the edges of a graph
+ </summary>
+	<param name="indices">List of indices to flip</param>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphEdgeList.flipGraph">
+	<summary>
+ Flips the Graph
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SpiderWebLibrary.graphRepresentaions.graphEdgeList">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class   : graphEdgeList
+ 
+ <summary>
+ Edge List representation of a Graph
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   22/11/2013 created
+ </history>
+</member><member name="M:SpiderWebLibrary.graphElements.compare.gVrndComp.#ctor(System.Int32)">
+	<summary>
+ Construct a new random graphVertex comperator
+ </summary>
+	<param name="seed">Comperators with the same seed value will generate the same sorting order.</param>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.compare.gVrndComp.Compare(SpiderWebLibrary.graphElements.graphVertex,SpiderWebLibrary.graphElements.graphVertex)">
+	<inheritdoc/>
+</member><member name="T:SpiderWebLibrary.graphElements.compare.gVrndComp">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class : gVrndComp
+ 
+ <summary>
+ Comperator to randomly sort a List of graphVertex.
+ </summary>
+	<remarks></remarks>
+ ''' <history>
+ [Richard Schaffranek]   22/11/2013 created
+ [Richard Schaffranek]   26/03/2014 changed compare function
+ </history>
+</member><member name="F:SpiderWebLibrary.graphTools.graphColoring.c">
+	<summary>
+ An Array of Integer() storing the color data
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphTools.graphColoring.#ctor">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.graphColoring.#ctor(SpiderWebLibrary.graphTools.graphColoring)">
+	<summary>
+	</summary>
+	<param name="G"></param>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphTools.graphColoring.#ctor(SpiderWebLibrary.graphRepresentaions.Graph)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.graphColoring.#ctor(System.Collections.Generic.List{SpiderWebLibrary.graphElements.graphVertex})">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.graphColoring.#ctor(SpiderWebLibrary.graphElements.graphVertex)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.graphColoring.#ctor(System.Int32)">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphTools.graphColoring.colors">
+	<summary>
+	</summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphTools.graphColoring.color(System.Int32)">
+	<summary>
+ Get/Set the color of a graphVertex
+ </summary>
+	<param name="i">index of the graphVertex to get/set the color.</param>
+	<value>Assign a precoloring to a graphVertex.</value>
+	<returns>Returns the coloring of a graphVertex.</returns>
+	<remarks>-1 will mark a graphVertex as uncolored / or not found</remarks>
+</member><member name="P:SpiderWebLibrary.graphTools.graphColoring.colorCount">
+	<summary>
+ Count the number of colors within the Graph.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphTools.graphColoring.rndSGC(System.Int32,System.Int32)">
+	<summary>
+ Use randomized sequential Graph to try to color the Graph with the targeted number of colors.
+ </summary>
+	<param name="target">Number of colors to color the Graph. Set to 2 for the least amount of colors.</param>
+	<param name="iterations">Maximum number of itterations to try to color the Graph.</param>
+	<remarks>Increase amount of itterations to find a better solution.</remarks>
+</member><member name="T:SpiderWebLibrary.graphTools.graphColoring">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class   : graphColoring
+ 
+ <summary>
+ Uses Vertex List representation to run apply graph coloring.
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   22/11/2013 created
+ [Richard Schaffranek]   26/03/2014 add SGC methode, changed rndSGC methode
+ [Richard Schaffranek]   09/05/2014 modified -&gt; changed c to array
+ </history>
+</member><member name="F:SpiderWebLibrary.graphElements.graphEdge.edgeCost">
+	<summary>
+ cost of the graphEdge.
+ </summary>
+	<remarks>
+ If set to  Double.PositiveInfinity, than the edge will be treated as having no costs.
+ This is different to a edgeCost of 0!
+ </remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphEdge.#ctor">
+	<overloads>
+ Constructor
+ </overloads>
+	<summary>
+ Creates a new  inValid instance of graphEdge
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphEdge.#ctor(SpiderWebLibrary.graphElements.graphEdge)">
+	<overloads>
+ Constructor
+ </overloads>
+	<summary>
+ Creates a new instance of graphEdge based on an existing graphEdge
+ </summary>
+	<param name="E">Existing graphEdge</param>
+	<remarks>
+	</remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphEdge.#ctor(System.Int32,System.Int32,System.Double)">
+	<overloads>
+ Constructor
+ </overloads>
+	<summary>
+ Creates a new instance of graphEdge form existing values.
+ </summary>
+	<param name="A">Starting point of graphEdge as index.</param>
+	<param name="B">End point of graphEdge as index.</param>
+	<param name="cost">Optional, Cost of the graphEdge</param>
+	<remarks>
+	</remarks>
+</member><member name="P:SpiderWebLibrary.graphElements.graphEdge.maxIndex">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphElements.graphEdge.negativeCost(System.Double)">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphElements.graphEdge.isValid">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphElements.graphEdge.remapVertex(System.Collections.Generic.List{System.Int32})">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphElements.graphEdge.Cost">
+	<summary>
+ Cost to travel along the graphEdge
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphElements.graphEdge.A">
+	<summary>
+ Starting point of the graphEdge
+ </summary>
+	<value>Must be different to the end point of the GraphEdge (B)</value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphElements.graphEdge.B">
+	<summary>
+ End point of the GraphEdge
+ </summary>
+	<value>Must be different to the starting point of the GraphEdge (A)</value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphElements.graphEdge.indexList">
+	<summary>
+ A,B as List.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphElements.graphEdge.addCost">
+	<summary>
+ Add Cost to the graphEdge
+ </summary>
+	<value>Value to add to the cost property.</value>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphEdge.Equals(System.Object)">
+	<summary>
+ Tests for equality. Uses HashCode as basis.
+ </summary>
+	<param name="obj"></param>
+	<returns>Return true if equal, otherwise false or if inValid false.</returns>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphEdge.GetHashCode">
+	<summary>
+ Hashfunction of the GraphEdge used to compare two GraphEdges.
+ </summary>
+	<returns>HashCode as Integer</returns>
+	<remarks>HashCode = Int 32.MinValue + (tmpA "leftBitShift" 16) + tmpB. This limites the Graph stored by the GraphEdge class to a maximum of 65534 vertices.</remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphEdge.ToString">
+	<summary>
+ Returns the String representation.
+ </summary>
+	<returns>String</returns>
+	<remarks>
+  (A, B) : Cost, Hashcode
+ </remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphEdge.Compare(SpiderWebLibrary.graphElements.graphEdge,SpiderWebLibrary.graphElements.graphEdge)">
+	<summary>
+ Compare two graphEdges
+ </summary>
+	<param name="E1"></param>
+	<param name="E2"></param>
+	<returns>Returns 1 if HashCode of E1 larger HashCode of E2, 0 if equal, -1 if  HashCode of E1 smaller HashCode of E2</returns>
+	<remarks>
+ Sorts graphEdges with asscenting HashCode.
+ </remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphEdge.Merge(SpiderWebLibrary.graphElements.graphEdge)">
+	<summary>
+ Merge two grapEdges.
+ </summary>
+	<param name="gE">graphEdge to merge</param>
+	<returns>Returns true if successful.</returns>
+	<remarks>Merges two graphEdges into the existing graphEdge.</remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphEdge.split(System.Int32,System.Double)">
+	<summary>
+ Splits the edge into two
+ </summary>
+	<param name="nI">index for the newly generated graphVertex</param>
+	<param name="t">Optional parameter for splitting the costs. If not set t = 0.5.</param>
+	<returns>Return new two new graphEdges.</returns>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphEdge.Flip">
+	<summary>
+ Flip the edge.
+ </summary>
+	<remarks>This will also change the HashCode of the graphEdge!</remarks>
+</member><member name="T:SpiderWebLibrary.graphElements.graphEdge">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class   : graphEdge
+ 
+ <summary>
+ graphEdge Class contains multible methodes to help the creation and manipulation of graphEdges
+ </summary>
+	<remarks>
+ Graphs represented through this class are limited to 65536 vertices. This is due to it's simple GetHashCode() function.
+ HashCode = Int32.MinValue + (tmpA "leftBitShift" 16) + tmpB. Further multible edges are not allowed.  
+ </remarks>
+	<history>
+ [Richard Schaffranek]   22/11/2013 created
+     ''' [Richard Schaffranek]   20/06/2014 allow Loops
+ </history>
+</member><member name="F:SpiderWebLibrary.graphElements.graphVertex.nb">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member><member name="F:SpiderWebLibrary.graphElements.graphVertex.nbCost">
+	<summary>
+ cost of the graphEdge connecting this graphVertex with the neighbour.
+ </summary>
+	<remarks>
+ If set to Double.PositiveInfinity, than the edge will be treated as having no costs.
+ This is different to a edgeCost of 0!
+ </remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphVertex.#ctor">
+	<overloads>
+ Constructor
+ </overloads>
+	<summary>
+ Creates a new  inValid instance of graphVertex
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphVertex.#ctor(SpiderWebLibrary.graphElements.graphVertex)">
+	<overloads>
+ Constructor
+ </overloads>
+	<summary>
+ Creates a new instance of graphVertex based on an existing graphVertex
+ </summary>
+	<param name="V">Existing graphVertex</param>
+	<remarks>
+	</remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphVertex.#ctor(System.Int32)">
+	<overloads>
+ Constructor
+ </overloads>
+	<summary>
+ Creates a new instance of graphVertex with no neighbours
+ </summary>
+	<param name="i">Index of the new graphVertex</param>
+	<remarks>
+	</remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphVertex.#ctor(System.Int32,System.Collections.Generic.List{System.Int32})">
+	<overloads>
+ Constructor
+ </overloads>
+	<summary>
+ Creates a new instance of graphVertex with neighbours.
+ </summary>
+	<param name="i">Index of the new graphVertex</param>
+	<param name="NB">List of graphVertex neighbours</param>
+	<remarks>
+ All edges with the neighbours have the cost of 0.
+ </remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphVertex.#ctor(System.Int32,System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Double})">
+	<overloads>
+ Constructor
+ </overloads>
+	<summary>
+ Creates a new instance of graphVertex with neighbours and costs.
+ </summary>
+	<param name="i">Index of the new graphVertex</param>
+	<param name="NB">List of graphVertex neighbours</param>
+	<param name="NB_Cost">List of costs traveling from graphVertex to its neighbours</param>
+	<remarks>
+ NB, NB_Cost must be of equal length.
+ </remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphVertex.#ctor(SpiderWebLibrary.graphElements.graphEdge)">
+	<overloads>
+ Constructor
+ </overloads>
+	<summary>
+ Constructor a new grpahVertex form an existing graphEdge
+ </summary>
+	<param name="gE">graphEdge to construct the new graphVertex from.</param>
+	<remarks>
+	</remarks>
+</member><member name="P:SpiderWebLibrary.graphElements.graphVertex.negativeCost(System.Double)">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphElements.graphVertex.maxIndex">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphElements.graphVertex.isValid">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphElements.graphVertex.remapVertex(System.Collections.Generic.List{System.Int32})">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphElements.graphVertex.index">
+	<summary>
+ index of node
+ </summary>
+	<value>Must be larger than or equal to 0</value>
+	<returns>Index of graphVertex</returns>
+	<remarks>
+	</remarks>
+</member><member name="P:SpiderWebLibrary.graphElements.graphVertex.neighbours">
+	<summary>
+ Neighbours of graphVertex
+ </summary>
+	<value></value>
+	<returns>List(of Integer)</returns>
+	<remarks>
+	</remarks>
+</member><member name="P:SpiderWebLibrary.graphElements.graphVertex.neighbours(System.Int32)">
+	<summary>
+ Neighbours of graphVertex
+ </summary>
+	<param name="i">index of the neighbour</param>
+	<value></value>
+	<returns>returns the neighbour at the index(i)</returns>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphElements.graphVertex.cost">
+	<summary>
+ Costs of the edges connecting to the grpahVertex neighbours.
+ </summary>
+	<value></value>
+	<returns>List(of Double). Returned List is of the same length as neighbours()</returns>
+	<remarks>
+	</remarks>
+</member><member name="P:SpiderWebLibrary.graphElements.graphVertex.cost(System.Int32)">
+	<summary>
+ Costs of the edges connecting to the grpahVertex neighbours.
+ </summary>
+	<param name="i">index of the neighbour</param>
+	<value></value>
+	<returns>Returns the cost to go from this graphVertex to the neighbour with at index(i)</returns>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphElements.graphVertex.outEdges">
+	<summary>
+ Collects all outgoing Edges
+ </summary>
+	<value></value>
+	<returns>Returns all outgoing Edges as graphEdge
+ </returns>
+	<remarks>
+	</remarks>
+</member><member name="P:SpiderWebLibrary.graphElements.graphVertex.outDegree">
+	<summary>
+ outDegree of the graphVertex
+ </summary>
+	<value></value>
+	<returns>as Integer </returns>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphVertex.ToString">
+	<summary>
+ Returns the String representation.
+ </summary>
+	<returns>String</returns>
+	<remarks>
+ index: (i), outDegree: (d)
+ </remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphVertex.Equals(System.Object)">
+	<summary>
+ Tests for equality. Uses HashCode as basis.
+ </summary>
+	<param name="obj"></param>
+	<returns>Return true if equal, otherwise false or if inValid false.</returns>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphVertex.GetHashCode">
+	<summary>
+ Hashfunction of the graphVertex.
+ </summary>
+	<returns></returns>
+	<remarks>HashCode = index. This Limits the amount of graphVertices that can be compared Int32.MaxValue.
+ If the graphVertex is not Valid this will return -1</remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphVertex.Compare(SpiderWebLibrary.graphElements.graphVertex,SpiderWebLibrary.graphElements.graphVertex)">
+	<summary>
+ Compare two graphVertices
+ </summary>
+	<param name="V1"></param>
+	<param name="V2"></param>
+	<returns>Returns 1 if HashCode of V1 larger HashCode of V2, 0 if equal, -1 if  HashCode of V1 smaller HashCode of V2</returns>
+	<remarks>
+ Sorts graphEdges with asscenting HashCode.
+ </remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphVertex.findNB(System.Int32)">
+	<summary>
+ Searches for the Neighbour of a graphVertex.
+ </summary>
+	<param name="nbIndex"></param>
+	<returns>Returns The zero-based index of item, if item is found; 
+ otherwise, a negative number that is the bitwise complement of the index of the next element 
+ that is larger than item or, if there is no larger element, the bitwise complement of Count.
+ </returns>
+	<remarks>Computes in O(log n), where n is the number of neighbours.</remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphVertex.removeNB(System.Int32)">
+	<summary>
+ Removes a neighbour.
+ </summary>
+	<param name="nbIndex"></param>
+	<returns>Returns true if successful, flase otherwise</returns>
+	<remarks>Computes in O(log n), where n is the number of neighbours.</remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphVertex.insert(SpiderWebLibrary.graphElements.graphEdge)">
+	<summary>
+ Inserts a graphEdge into the neighbourhood of a graphVertex.
+ </summary>
+	<param name="gE"></param>
+	<returns>Returns True if successful, false otherwise.</returns>
+	<remarks>Computes in O(log n), where n is the number of neighbours.</remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphVertex.insert(System.Int32,System.Double)">
+	<summary>
+ Inserts a new neighbour into the graphVertex neighbourhood. 
+ </summary>
+	<param name="nbI"></param>
+	<param name="nbC"></param>
+	<returns>Returns True if successful, false otherwise.</returns>
+	<remarks>Computes in O(log n), where n is the number of neighbours.</remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphVertex.merge(SpiderWebLibrary.graphElements.graphVertex)">
+	<summary>
+ Merges a graphVertex with this graphVertex
+ </summary>
+	<param name="gV"></param>
+	<returns></returns>
+	<remarks>Computes in O(m log n), where n is the number of neighbours of this graphVertex and m is the number of neighbours of the grpahVertex to merge.</remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphVertex.initialize">
+	<summary>
+ Removes all neighbours from this graphVertex 
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphVertex.median(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Median value of the neighbourhood.
+ </summary>
+	<param name="Values">The list has to be as long as the maxIndex of this gaphVertex or the neighborhood.</param>
+	<returns>Returns the median value as double of the neighbourhood specified by the graphVertex.
+ If the list length is smaller than the maxIndex NaN will be returned.
+ </returns>
+	<remarks>Computes in O(n log n), where n is the number of neighbours.</remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphVertex.average(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Average value of the neighbourhood.
+ </summary>
+	<param name="Values">The list has to be as long as the highest index of the vertex or the neighborhood.</param>
+	<returns>Returns the average value as double of the neighbourhood specified by the graphVertex.
+ If the list length is smaller than the maxIndex NaN will be returned.
+ </returns>
+	<remarks>Computes in O(n), where n is the number of neighbours.</remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphVertex.isPOI(System.Collections.Generic.List{System.Double})">
+	<summary>
+ Checks if the graphVertex is a Point of Intrest within the neighbourhood.
+ </summary>
+	<param name="Values">The list has to be as long as the highest index of the vertex or the neighborhood.</param>
+	<returns>Returns True if all other Values within the neighbourhood are larger or equal to the value of this graphVertex.
+  If the list length is smaller than the maxIndex NaN will be returned.
+ </returns>
+	<remarks>Computes in O(n), where n is the number of neighbours.</remarks>
+</member><member name="T:SpiderWebLibrary.graphElements.graphVertex">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class   : graphVertex
+ 
+ <summary>
+ graphVertex Class contains multible methodes to help the creation and manipulation of graphVertex
+ </summary>
+	<remarks>
+ Graphs represented through this class are limited to Int32.MaxValue vertices. This is due to it's simple GetHashCode() function.
+ HashCode = index of vertex 
+ </remarks>
+	<history>
+ [Richard Schaffranek]   22/11/2013 created
+ </history>
+</member><member name="M:SpiderWebLibrary.graphTools.eulerianPath.#ctor">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.eulerianPath.#ctor(SpiderWebLibrary.graphRepresentaions.Graph)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.eulerianPath.#ctor(System.Collections.Generic.List{SpiderWebLibrary.graphElements.graphVertex})">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.eulerianPath.#ctor(SpiderWebLibrary.graphElements.graphVertex)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.eulerianPath.#ctor(System.Int32)">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphTools.eulerianPath.getSP">
+	<summary>
+ Get the possible starting points of an eularian path
+ </summary>
+	<value></value>
+	<returns>Returns a list of possible SP for an eularian path as graphVertex.</returns>
+	<remarks>
+ Function computeSPEP() has to be called first before SP can be collected.
+ If computeSPEP() was not called or no eularian path exists this will return an empty list.
+ </remarks>
+</member><member name="P:SpiderWebLibrary.graphTools.eulerianPath.getEP">
+	<summary>
+ Get the possible end points of an eularian path
+ </summary>
+	<value></value>
+	<returns>Returns a list of possible EP for an eularian path as graphVertex.</returns>
+	<remarks>
+ Function computeSPEP() has to be called first before SP can be collected.
+ If computeSPEP() was not called or no eularian path exists this will return an empty list.
+ </remarks>
+</member><member name="P:SpiderWebLibrary.graphTools.eulerianPath.getSPindex">
+	<summary>
+ Get the possible starting points of an eularian path
+ </summary>
+	<value></value>
+	<returns>Returns a list of possible SP for an eularian path as graphVertex.index.</returns>
+	<remarks>
+ Function computeSPEP() has to be called first before SP can be collected.
+ If computeSPEP() was not called or no eularian path exists this will return an empty list.
+ </remarks>
+</member><member name="P:SpiderWebLibrary.graphTools.eulerianPath.getEPindex">
+	<summary>
+ Get the possible end points of an eularian path
+ </summary>
+	<value></value>
+	<returns>Returns a list of possible EP for an eularian path as graphVertex.index.</returns>
+	<remarks>
+ Function computeSPEP() has to be called first before SP can be collected.
+ If computeSPEP() was not called or no eularian path exists this will return an empty list.
+ </remarks>
+</member><member name="M:SpiderWebLibrary.graphTools.eulerianPath.computeSPEP">
+	<summary>
+ Compute the possible starting and endpoints of the eularian path.
+ </summary>
+	<returns>Returns true if an eularian path exists, false otherwise.</returns>
+	<remarks></remarks>
+</member><member name="T:SpiderWebLibrary.graphTools.eulerianPath">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class   : eulerianPath
+ 
+ <summary>
+ Uses Vertex List representation to compute the EularianPath.
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   22/11/2013 created
+ </history>
+</member><member name="F:SpiderWebLibrary.clustering.distanceClustering.rV">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member><member name="F:SpiderWebLibrary.clustering.distanceClustering.m">
+	<summary>
+	</summary>
+	<remarks> 0 largerEquals m(i) largerEquals rV.length</remarks>
+</member><member name="P:SpiderWebLibrary.clustering.distanceClustering.match(System.Int32)">
+	<summary>
+ Returns the match of the specified RowVector index
+ </summary>
+	<param name="index">0-based RowVector index</param>
+	<returns>0-based cluster assignment</returns>
+	<remarks>Will return -1 if the index could not be found.</remarks>
+</member><member name="T:SpiderWebLibrary.clustering.distanceClustering">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class   : distanceClustering
+ 
+ <summary>
+ Clustering
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   24/08/2014 created
+ </history>
+</member><member name="M:SpiderWebLibrary.graphElements.compare.gEmaxCost.Compare(SpiderWebLibrary.graphElements.graphEdge,SpiderWebLibrary.graphElements.graphEdge)">
+	<inheritdoc/>
+</member><member name="T:SpiderWebLibrary.graphElements.compare.gEmaxCost">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class : gEmaxCost
+ 
+ <summary>
+ Comperator to sort a list of graphEdges decesinding based on their cost values.
+ </summary>
+	<remarks></remarks>
+	<history>
+ [Richard Schaffranek]   26/03/2014 created
+ </history>
+</member><member name="T:SpiderWebLibrary.clustering.singleLinkage">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class   : singleLinkage
+ 
+ <summary>
+ Clustering
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   20/08/2014 created
+ </history>
+</member><member name="M:SpiderWebLibrary.graphElements.compare.gEminCost.Compare(SpiderWebLibrary.graphElements.graphEdge,SpiderWebLibrary.graphElements.graphEdge)">
+	<inheritdoc/>
+</member><member name="T:SpiderWebLibrary.graphElements.compare.gEminCost">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class : gEminCost
+ 
+ <summary>
+ Comperator to sort a list of graphEdges asscending based on their cost values.
+ </summary>
+	<remarks></remarks>
+	<history>
+ [Richard Schaffranek]   22/11/2013 created
+ </history>
+</member><member name="P:SpiderWebLibrary.graphTools.spectralGraphMatrix.dimension">
+	<summary>
+ Dimension of the graphMatrix
+ </summary>
+	<value></value>
+	<returns>Returns the dimension of a graphMatrix as Integer</returns>
+	<remarks>The highest index within the graphMatrix is dimension-1</remarks>
+</member><member name="P:SpiderWebLibrary.graphTools.spectralGraphMatrix.eigenValue(System.Int32)">
+	<summary>
+ Get the i'th eigenValue
+ </summary>
+	<param name="i">index of the eigenValue</param>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphTools.spectralGraphMatrix.eigenValue">
+	<summary>
+ Returns the eigenValue as Double Array
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphTools.spectralGraphMatrix.eigenVector(System.Int32)">
+	<summary>
+ Get the i'th eigenVector
+ </summary>
+	<param name="i">index of the eigenVector</param>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphTools.spectralGraphMatrix.eigenVector">
+	<summary>
+ Get all eigenVectors of the graphMatrix
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphTools.spectralGraphMatrix.eigenVectorRow(System.Int32,System.Int32)">
+	<summary>
+ Get the i'th row of the eigenvectors
+ </summary>
+	<param name="i">i'th row of the eigenvectors</param>
+	<param name="d">dimension of the rowVector (number of eigenvectors taken into account)</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphTools.spectralGraphMatrix.eigenVectorRow(System.Int32)">
+	<summary>
+ Get all rows of the eigenvectors
+ </summary>
+	<param name="d">dimension of the rowVector (number of eigenvectors taken into account)</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphTools.spectralGraphMatrix.dominantSign(System.Int32)">
+	<summary>
+ Dominant sign of an eigenvector
+ </summary>
+	<param name="i">i'th eigenvector</param>
+	<value></value>
+	<returns></returns>
+	<remarks>dominant Sign takes the currently computed sign correction into account</remarks>
+</member><member name="P:SpiderWebLibrary.graphTools.spectralGraphMatrix.sign(System.Object)">
+	<summary>
+ Get or set the sign correction for a specific eigenvector
+ </summary>
+	<param name="i"></param>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphTools.spectralGraphMatrix.sign">
+	<summary>
+ Get or set the sign correction for all eigenvectors
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphTools.spectralGraphMatrix.reverse">
+	<summary>
+ Reverse the sorting of the Eigenvectors
+ </summary>
+	<remarks>Sorting is based on the eigenvalues of the eigenvectors</remarks>
+</member><member name="M:SpiderWebLibrary.graphTools.spectralGraphMatrix.resetSigns">
+	<summary>
+ Reset all signs to signCorrection.pos
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphTools.spectralGraphMatrix.removeDegenerated">
+	<summary>
+ Removes all degenerated Eigenvalues and the coresponding Eigenvectors
+ </summary>
+	<remarks>An Eigenvalues is degenerated if it is not unique.</remarks>
+</member><member name="M:SpiderWebLibrary.graphTools.spectralGraphMatrix.dominantSignCorrection(SpiderWebLibrary.graphTools.spectralGraphMatrix)">
+	<summary>
+ Dominant Sign Correction
+ </summary>
+	<remarks> This is based on: 
+ Kosinov, Serhiy, and Terry Caelli. "Inexact multisubgraph matching using graph eigenspace and clustering models." Structural, Syntactic, and Statistical Pattern Recognition. Springer Berlin Heidelberg, 2002. 133-142.
+ http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.7.2143
+ </remarks>
+	<returns>
+ Returns False if the dimension of the provided spectralGraphMatrix was smaller than the dimension of this Graph.
+ </returns>
+</member><member name="M:SpiderWebLibrary.graphTools.spectralGraphMatrix.minimizeCostsSignCorrection(SpiderWebLibrary.graphTools.spectralGraphMatrix)">
+	<summary>
+ Minimizing Costs Sign Correction
+ </summary>
+	<remarks> This is based on: 
+ Shapiro, Larry S., and J. Michael Brady. "Feature-based correspondence: an eigenvector approach." Image and vision computing 10.5 (1992): 283-288.
+ http://image.ntua.gr/iva/files/ShapiroBrady_IVC1992%20-%20Feature-Based%20Correspondence-%20an%20Eigenvector%20Approach.pdf
+ </remarks>
+	<returns>
+ Returns False if the dimension of the provided spectralGraphMatrix was smaller than the dimension of this spectralGraphMatrix.
+ </returns>
+</member><member name="T:SpiderWebLibrary.graphTools.spectralGraphMatrix">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class   : spectralGraphMatrix
+ 
+ <summary>
+ Spectral Graph MAtrix 
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   28/07/2014 created
+ </history>
+</member><member name="T:SpiderWebLibrary.graphElements.compare.gVComp">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Interface : gVComp
+ 
+ <summary>
+ Interface for all graphVertex compare elements.
+ </summary>
+	<remarks></remarks>
+ ''' <history>
+ [Richard Schaffranek]   22/11/2013 created
+ </history>
+</member><member name="M:SpiderWebLibrary.graphTools.searchGraph.#ctor">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.searchGraph.#ctor(SpiderWebLibrary.graphRepresentaions.Graph)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.searchGraph.#ctor(System.Collections.Generic.List{SpiderWebLibrary.graphElements.graphVertex})">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.searchGraph.#ctor(SpiderWebLibrary.graphElements.graphVertex)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.searchGraph.#ctor(System.Int32)">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphTools.searchGraph.rootIndex">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphTools.searchGraph.split_tAt(System.Double)">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphTools.searchGraph.tAt(System.Double)">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphTools.searchGraph.graphEdge_tAt(System.Double)">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphTools.searchGraph.graphEdgeIndex_tAt(System.Double)">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphTools.searchGraph.dist">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphTools.searchGraph.dist(System.Int32)">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphTools.searchGraph.previous(System.Int32)">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphTools.searchGraph.gVLPath(System.Int32)">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphTools.searchGraph.gELPath(System.Int32)">
+	<inheritdoc/>
+</member><member name="P:SpiderWebLibrary.graphTools.searchGraph.isValidTree">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.searchGraph.find(System.Int32,System.Double)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.searchGraph.findALL(System.Int32,System.Double)">
+	<inheritdoc/>
+</member><member name="T:SpiderWebLibrary.graphTools.searchGraph">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class   : BreadthFirstSearch
+ 
+ <summary>
+ Uses Vertex List representation to run "Breadth First Search".
+ Constructs a Graph with edges pointing to the predecessor of each vertex.
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   22/11/2013 created
+ [Richard Schaffranek]   03/03/2014 modified
+ [Richard Schaffranek]   09/05/2014 modified -&gt; changed c to array
+ </history>
+</member><member name="T:SpiderWebLibrary.clustering.UPGMA">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class   : UPGMA
+ 
+ <summary>
+ Clustering
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   20/08/2014 created
+ </history>
+</member><member name="F:SpiderWebLibrary.clustering.pearsonDistance.s">
+	<summary>
+	</summary>
+	<remarks>s is the squared standard deviation</remarks>
+</member><member name="T:SpiderWebLibrary.clustering.pearsonDistance">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class   : pearsonDistance
+ 
+ <summary>
+ Clustering
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   24/08/2014 created
+ </history>
+</member><member name="P:SpiderWebLibrary.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:SpiderWebLibrary.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:SpiderWebLibrary.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:SpiderWebLibrary.graphElements.compare.gVdegrreComp.Compare(SpiderWebLibrary.graphElements.graphVertex,SpiderWebLibrary.graphElements.graphVertex)">
+	<inheritdoc/>
+</member><member name="T:SpiderWebLibrary.graphElements.compare.gVdegrreComp">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class : gVdegrreComp
+ 
+ <summary>
+ Comperator to sort a list of graphVertex based on the graphVertex.outDegree.
+ </summary>
+	<remarks></remarks>
+	<history>
+ [Richard Schaffranek]   22/11/2013 created
+ </history>
+</member><member name="T:SpiderWebLibrary.graphElements.compare.gEComp">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Interface : gEComp
+ 
+ <summary>
+ Interface for all graphEdge compare elements.
+ </summary>
+	<remarks></remarks>
+ ''' <history>
+ [Richard Schaffranek]   22/11/2013 created
+ </history>
+</member><member name="P:SpiderWebLibrary.graphElements.graphElement.negativeCost(System.Double)">
+	<summary>
+ Checks for negativeCosts.
+ </summary>
+	<value></value>
+	<returns>Return true if any connectin to the neighbours has negative costs, otherwise False.
+ </returns>
+	<remarks>
+	</remarks>
+</member><member name="P:SpiderWebLibrary.graphElements.graphElement.maxIndex">
+	<summary>
+ Get the maximum index.
+ </summary>
+	<value></value>
+	<returns>The maximum of index of this graphElement and its neighbourhood</returns>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphElements.graphElement.isValid">
+	<summary>
+ Checks if a graphElement is valid. 
+ </summary>
+	<returns></returns>
+	<remarks>
+ Returns True if the vertex is valid, otherwise false.
+ </remarks>
+</member><member name="M:SpiderWebLibrary.graphElements.graphElement.remapVertex(System.Collections.Generic.List{System.Int32})">
+	<summary>
+ Remap vertex indices of graphElements
+ </summary>
+	<param name="map">List (of Integer)</param>
+	<remarks>Remaps the vertex indices to the position of the current vertex index within the map. If a index is not found in the map than it will be set to -1.</remarks>
+</member><member name="T:SpiderWebLibrary.graphElements.graphElement">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Interface : graphElement
+ 
+ <summary>
+ graphElement Interface implements some in common Properties and Functions of graphEdge and graphVertex.
+ </summary>
+	<history>
+ [Richard Schaffranek]   22/11/2013 created
+ </history>
+</member><member name="T:SpiderWebLibrary.clustering.manhattenDistance">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class   : euclidianDistance
+ 
+ <summary>
+ Clustering
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   24/08/2014 created
+ </history>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphMatrix.#ctor">
+	<summary>
+  Construct a empty Graph represented by a 1 dimensional Matrix
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphMatrix.#ctor(SpiderWebLibrary.graphRepresentaions.Graph,SpiderWebLibrary.graphRepresentaions.graphMatrix.matrixType,System.Double)">
+	<summary>
+ Construct a new graphMatrix from a Graph
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphMatrix.#ctor(SpiderWebLibrary.graphRepresentaions.graphMatrix)">
+	<summary>
+ Construct a new graphMatrix from a graphMatrix
+ </summary>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.graphMatrix.dimension">
+	<summary>
+ Dimension of the graphMatrix
+ </summary>
+	<value></value>
+	<returns>Returns the dimension of a graphMatrix as Integer</returns>
+	<remarks>The highest index within the graphMatrix is dimension-1</remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphMatrix.relexedLaplacianMatrix(SpiderWebLibrary.graphRepresentaions.Graph,System.Double)">
+	<summary>
+ Construct the relexed Laplacian Matrix representation of a Graph
+ </summary>
+	<param name="G">Existing Graph</param>
+	<remarks>for further details see: https://kops.ub.uni-konstanz.de/xmlui/bitstream/handle/urn:nbn:de:bsz:352-opus-15332/thesis.pdf?sequence=1
+ </remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphMatrix.normalizedLaplacianMatrix(SpiderWebLibrary.graphRepresentaions.Graph)">
+	<summary>
+ Construct the degree normalized Laplacian Matrix representation of a Graph
+ </summary>
+	<param name="G">Existing Graph</param>
+	<remarks>for further details see: https://kops.ub.uni-konstanz.de/xmlui/bitstream/handle/urn:nbn:de:bsz:352-opus-15332/thesis.pdf?sequence=1
+ </remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphMatrix.weightedLaplacianMatrix(SpiderWebLibrary.graphRepresentaions.Graph)">
+	<summary>
+ Construct the weighted Laplacian Matrix representation of a Graph
+ </summary>
+	<param name="G">Existing Graph</param>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphMatrix.laplacianMatrix(SpiderWebLibrary.graphRepresentaions.Graph)">
+	<summary>
+ Construct the Laplacian Matrix representation of a Graph
+ </summary>
+	<param name="G">Existing Graph</param>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphMatrix.adjacencyMatrix(SpiderWebLibrary.graphRepresentaions.Graph)">
+	<summary>
+ Construct the Adjacency Matrix representation of a Graph
+ </summary>
+	<param name="G">Existing Graph</param>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.graphMatrix.getGausianWeightedMatrix(SpiderWebLibrary.graphRepresentaions.graphVertexList,System.Double)">
+	<summary>
+ Construct a Gaussian Weighted Matrix of a Graph
+ </summary>
+	<param name="G">Existing Graph</param>
+	<remarks>for further details see: http://image.ntua.gr/iva/files/ShapiroBrady_IVC1992%20-%20Feature-Based%20Correspondence-%20an%20Eigenvector%20Approach.pdf
+ </remarks>
+</member><member name="T:SpiderWebLibrary.graphRepresentaions.graphMatrix">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class   : graphMatrix
+ 
+ <summary>
+ Represents a Graph as Matrix.
+ </summary>
+	<remarks>
+ Uses Meta.Numerics for Matrix Calculation
+ http://www.meta-numerics.net/
+ </remarks>
+	<history>
+ [Richard Schaffranek]   06/06/2014 created
+ </history>
+</member><member name="F:SpiderWebLibrary.clustering.agglomerativeClustering.rV">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member><member name="F:SpiderWebLibrary.clustering.agglomerativeClustering.m">
+	<summary>
+	</summary>
+	<remarks> 0 largerEquals m(i) largerEquals rV.length</remarks>
+</member><member name="P:SpiderWebLibrary.clustering.agglomerativeClustering.match(System.Int32)">
+	<summary>
+ Returns the match of the specified RowVector index
+ </summary>
+	<param name="index">0-based RowVector index</param>
+	<returns>0-based cluster assignment</returns>
+	<remarks>Will return -1 if the index could not be found.</remarks>
+</member><member name="T:SpiderWebLibrary.clustering.agglomerativeClustering">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class   : agglomerativeClustering
+ 
+ <summary>
+ Clustering
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   20/08/2014 created
+ </history>
+</member><member name="T:SpiderWebLibrary.clustering.UPGMC">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class   : UPGMA
+ 
+ <summary>
+ Clustering
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   20/08/2014 created
+ </history>
+</member><member name="M:SpiderWebLibrary.graphTools.minSpanningTree.#ctor">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.minSpanningTree.#ctor(SpiderWebLibrary.graphRepresentaions.Graph)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.minSpanningTree.#ctor(SpiderWebLibrary.graphElements.graphEdge)">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.minSpanningTree.#ctor(System.Collections.Generic.List{SpiderWebLibrary.graphElements.graphEdge})">
+	<inheritdoc/>
+</member><member name="M:SpiderWebLibrary.graphTools.minSpanningTree.computeTree(SpiderWebLibrary.graphElements.compare.gEComp)">
+	<summary>
+ Computes the minimal Spanning Tree of the Graph.
+ </summary>
+	<param name="comp">Comparater determining the sorting order of the graphEdges. Use gEminCost to the minimalSpanningTree</param>
+	<remarks>Turns the Graph into an undirected Graph at first.</remarks>
+</member><member name="P:SpiderWebLibrary.graphTools.minSpanningTree.isValidTree">
+	<inheritdoc/>
+</member><member name="T:SpiderWebLibrary.graphTools.minSpanningTree">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class   : minSpanningTree
+ 
+ <summary>
+ Uses Edge List representation to compute the minSpanningTree.
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   22/11/2013 created
+ [Richard Schaffranek]   26/03/2014 changed computeTree methode
+ </history>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.Graph.split_tAt(System.Double,System.Collections.Generic.List{System.Double})">
+	<summary>
+ Cut a graph at the specified parameter.
+ </summary>
+	<param name="t">parameter to search for</param>
+	<param name="costs">cost at each graphVertex</param>
+	<value></value>
+	<returns>Returns two graphs. The first containing all parts of the graph with a value 
+ smaller and equals than the parameter t, another one with all parts larger and equals  than the parameter t
+ If the parameter t is on a graphEdge the graphEdge will be split.
+ </returns>
+	<remarks>s </remarks>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.Graph.tAt(System.Double,System.Collections.Generic.List{System.Double})">
+	<summary>
+ Cut a graph at the specified parameter.
+ </summary>
+	<param name="t">parameter to search for</param>
+	<param name="costs">cost at each graphVertex</param>
+	<value></value>
+	<returns>Returns a t value for each graphEdge within the given parameter. 
+ Use graphEdgeAt or graphEdgeIndexAt to get the coresponding graphEdge.
+ If costs of the graphEdge are specified, takes these costs into account and not only interpolates between the value of the connected graphVertices.
+ </returns>
+	<remarks>s </remarks>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.Graph.graphEdge_tAt(System.Double,System.Collections.Generic.List{System.Double})">
+	<summary>
+ Find all graphEdges with a specified parameter.
+ </summary>
+	<param name="t">parameter to search for</param>
+	<param name="costs">cost at each graphVertex</param>
+	<value></value>
+	<returns>Returns a list of graphEdges with the given parameter.
+ </returns>
+	<remarks>s </remarks>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.Graph.graphEdgeIndex_tAt(System.Double,System.Collections.Generic.List{System.Double})">
+	<summary>
+ Find all graphEdges with a specified parameter.
+ </summary>
+	<param name="t">parameter to search for</param>
+	<param name="costs">cost at each graphVertex</param>
+	<value></value>
+	<returns>Returns the list indices of graphEdges with the given parameter.
+ </returns>
+	<remarks>s </remarks>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.Graph.negativeCost(System.Double)">
+	<summary>
+ Checks if any edge of a Graph has a negative cost.
+ </summary>
+	<value></value>
+	<returns>Returns flase if no edge has costs smaler or equals to 0.</returns>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.Graph.edgeCount">
+	<summary>
+ Counts the number of edges of a Graph
+ </summary>
+	<value></value>
+	<returns>Returns the number of edges within a Graph as Integer</returns>
+	<remarks>The highest index of an edge in the Graph is edgeCount-1</remarks>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.Graph.vertexCount">
+	<summary>
+ Counts the number of vertices of a Graph
+ </summary>
+	<value></value>
+	<returns>Returns the number of vertices within a Graph as Integer</returns>
+	<remarks>The highest index of a vertex in the Graph is vertexCount-1</remarks>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.Graph.getInEdges(System.Int32)">
+	<summary>
+ Gets the graphEdges leading towards a specific vertex.
+ </summary>
+	<param name="i"></param>
+	<value></value>
+	<returns>Returns the inward edges as List(of graphEdge)</returns>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.Graph.getOutEdges(System.Int32)">
+	<summary>
+ Gets the graphEdges leading away from a specific vertex.
+ </summary>
+	<param name="i"></param>
+	<value></value>
+	<returns>Returns the outward edges as List(of graphEdge)</returns>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.Graph.getInNB(System.Int32)">
+	<summary>
+ Gets the graphVertex that contain this graphVertex as neighbour.
+ </summary>
+	<param name="i"></param>
+	<value></value>
+	<returns>Returns the graphVertex  as List(of graphVertex)</returns>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.Graph.getOutNB(System.Int32)">
+	<summary>
+ Gets the neighbouring graphVertx.
+ </summary>
+	<param name="i"></param>
+	<value></value>
+	<returns>Returns the graphVertex  as List(of graphVertex)</returns>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.Graph.getEdgeList">
+	<summary>
+ Gets the icidence representation of a Graph.
+ </summary>
+	<value></value>
+	<returns>Returns the Graph as List( of graphEdges)</returns>
+	<remarks></remarks>
+</member><member name="P:SpiderWebLibrary.graphRepresentaions.Graph.getVertexList">
+	<summary>
+ Gets the adjacency representation of a Graph.
+ </summary>
+	<value></value>
+	<returns>Returns the Graph as List( of graphEdges)</returns>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.Graph.add(SpiderWebLibrary.graphElements.graphEdge)">
+	<summary>
+ Add a graphEdge into a Graph.
+ </summary>
+	<param name="gE"></param>
+	<remarks>This might break the order of elements within the Graph. If unsure use insert instate.</remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.Graph.add(SpiderWebLibrary.graphElements.graphVertex)">
+	<summary>
+ Add a graphVertex into a Graph.
+ </summary>
+	<param name="gV"></param>
+	<remarks>This might break the order of elements within the Graph. If unsure use insert instate.</remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.Graph.dualGraph">
+	<summary>
+ Convert the Graph into its dualGraph. 
+ </summary>
+	<remarks>The cost of each Edge is set to 0</remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.Graph.dualVertexGraph">
+	<summary>
+ Convert the Graph into its dualGraph and connects it to the vertices of the original Graph.
+ </summary>
+	<remarks>
+ The costs from the old vertices to the new vertices are either set to infinity (ingoing) or 0 (outgoing) all other edge costs are set to 0.
+ </remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.Graph.subGraph(System.Collections.Generic.List{System.Int32})">
+	<summary>
+ Create a subGraph from a graph
+ </summary>
+	<param name="indices">List of indices to keep</param>
+	<remarks>Outcome depends on the Graph representation.</remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.Graph.clear">
+	<summary>
+ Removes all elements of a Graph.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.Graph.ensureUndirected">
+	<summary>
+ Ensures that the Graph is undirected.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.Graph.union(SpiderWebLibrary.graphRepresentaions.Graph)">
+	<summary>
+ Union two Graphs.
+ </summary>
+	<param name="G"></param>
+	<returns>Returns the number of edges that could be added to this Graph.</returns>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.Graph.insert(SpiderWebLibrary.graphElements.graphVertex)">
+	<summary>
+ Insert a graphVertex into a Graph.
+ </summary>
+	<param name="gV"></param>
+	<returns>Returns the number of edges that could be added to the Grpah.</returns>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.Graph.insert(SpiderWebLibrary.graphElements.graphEdge)">
+	<summary>
+ Insert a graphEdge into a Graph.
+ </summary>
+	<param name="gE"></param>
+	<returns>Returns true if the graphEdge could be inserted, false otherwise</returns>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.Graph.delete(System.Int32)">
+	<summary>
+ Remove a element from the Graph.
+ </summary>
+	<param name="index">Index of the element ot remove</param>
+	<returns>Returns true if succsessful.</returns>
+	<remarks>Outcome depends on the Graph representation.</remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.Graph.delete(System.Collections.Generic.List{System.Int32})">
+	<summary>
+ Remove elements from the Graph.
+ </summary>
+	<param name="indices">List of indices to remove</param>
+	<returns>Returns the number of elements successfuly removed.</returns>
+	<remarks>Outcome depends on the Graph representation.</remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.Graph.delete(SpiderWebLibrary.graphElements.graphEdge)">
+	<summary>
+ Remove a graphEdge from the Graph.
+ </summary>
+	<param name="gE"></param>
+	<returns>Returns true if succsessful.</returns>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.Graph.delete(SpiderWebLibrary.graphElements.graphVertex)">
+	<summary>
+ Removes the edges of a graphVertex from the Graph
+ </summary>
+	<param name="gV"></param>
+	<returns>Returns true if succsessful.</returns>
+	<remarks></remarks>
+</member><member name="M:SpiderWebLibrary.graphRepresentaions.Graph.simplify">
+	<summary>
+ Removes all graph vertices without in/out edges, and rempas their 
+ indices. e.g. Indices: 1, 2, 3, 5, 8, 9, 11 get remaped to 1, 2, 3, 4, 5, 6, 7
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SpiderWebLibrary.graphRepresentaions.Graph">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class   : Graph
+ 
+ <summary>
+ Interface providing methodes across different graphRepresentations
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   22/11/2013 created
+ </history>
+</member><member name="T:SpiderWebLibrary.clustering.completeLinkage">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class   : completeLinkage
+ 
+ <summary>
+ Clustering
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   20/08/2014 created
+ </history>
+</member><member name="T:SpiderWebLibrary.clustering.WPGMA">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class   : WPGMA
+ 
+ <summary>
+ Clustering
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   20/08/2014 created
+ </history>
+</member><member name="T:SpiderWebLibrary.clustering.gowerDistance">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class   : gowerDistance
+ 
+ <summary>
+ Clustering
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   24/08/2014 created
+ </history>
+</member><member name="T:SpiderWebLibrary.clustering.euclidianDistance">
+ -------------------------------------------
+ Project : SpiderWebLibrary
+ Class   : euclidianDistance
+ 
+ <summary>
+ Clustering
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   24/08/2014 created
+ </history>
+</member>
+</members>
+</doc>

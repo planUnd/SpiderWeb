@@ -1,0 +1,1009 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+GH_SpiderWebLibrary
+</name>
+</assembly>
+<members>
+<member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_visualGraph.#ctor">
+	<summary>
+ Construct an empty visualGraph
+ </summary>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_visualGraph.#ctor(System.Int32,System.Int32)">
+	<summary>
+ Construct a new GH_visualGraph
+ </summary>
+	<param name="w">Width of the grid (x)</param>
+	<param name="h">Height of the grid (y)</param>
+	<remarks>Will set all gridCells to State.void</remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_visualGraph.Read(GH_IO.Serialization.GH_IReader)">
+	<summary>
+ This method is called whenever the instance is required to deserialize itself. (Inherited from GH_ISerializable.)
+ </summary>
+	<returns>Returns <code>False</code></returns>
+	<remarks>Not implemented!</remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_visualGraph.Write(GH_IO.Serialization.GH_IWriter)">
+	<summary>
+ This method is called whenever the instance is required to serialize itself. (Inherited from GH_ISerializable.) 
+ </summary>
+	<returns>Returns <code>False</code></returns>
+	<remarks>Not implemented!</remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_visualGraph.CastFrom(System.Object)">
+	<summary>
+ Attempt a cast from generic object 
+ </summary>
+	<param name="source"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_visualGraph.CastTo``1(``0@)">
+	<summary>
+ Attempt a cast to type T 
+ </summary>
+	<typeparam name="T"></typeparam>
+	<param name="target"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_visualGraph.Duplicate">
+	<summary>
+ Make a complete duplicate of this instance. No shallow copies. 
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_visualGraph.EmitProxy">
+	<summary>
+ Create a new proxy for this instance. Return Null if this class does not support proxies. 
+ </summary>
+	<returns>Returns <code>Nothing</code></returns>
+	<remarks>Not implemented!</remarks>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_visualGraph.IsValid">
+	<summary>
+ Gets a value indicating whether or not the current value is valid. 
+ </summary>
+	<value></value>
+	<returns>Returns true.</returns>
+	<remarks> Graphs should always be valid, if not please contact the author.</remarks>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_visualGraph.IsValidWhyNot">
+	<summary>
+ Gets a string describing the state of "invalidness". If the instance is valid, then this property should return Nothing or String.Empty. 
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_visualGraph.ScriptVariable">
+	<summary>
+ Get the "naked" SpiderWebLibrary represnetation.
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_visualGraph.ToStringGH">
+	<summary>
+ Creates a string description of the current instance value 
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_visualGraph.TypeDescription">
+	<summary>
+ Gets the TypeDescription
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_visualGraph.TypeName">
+	<summary>
+ Gets the TypeName
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_visualGraph.visualGraphGrid(Rhino.Geometry.Curve,System.Collections.Generic.List{Rhino.Geometry.Curve},System.Double,System.Double)">
+	<summary>
+ Set the State the visualGraphVertices to Solid / Void.
+ </summary>
+	<param name="Boundary">Boundary outline that defines the area in which to construct the visualGraph grid.</param>
+	<param name="obstacles">Obstacles within the Boundary</param>
+	<param name="sXY">Wanted size of the gridCells</param>
+	<param name="dt">If the midpoint is not within an obstacle a gridCell is also 
+ defined as solid if the obstacles is within the given distance form the midpoint</param>
+	<returns>A list of rectangles, representing the gridCells</returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_visualGraph.Inside(System.Collections.Generic.List{Rhino.Geometry.Curve},Rhino.Geometry.Curve,Rhino.Geometry.Point3d,System.Double)">
+	<summary>
+ Test if a point is within an obstacle or outside of a Boundary.
+ </summary>
+	<param name="Obstacle">Obstacles within the Boundary</param>
+	<param name="Boundary">Boundary outline that defines the area in which to construct the visualGraph grid.</param>
+	<param name="p">Point to test</param>
+	<param name="dt">If the midpoint is not within an obstacle a gridCell is also defined as solid if the obstacles is within the given distance form the midpoint</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_visualGraph">
+ -------------------------------------------
+ Project : GH_SpiderWebLibrary
+ Class   : GH_visualGraph
+ 
+ <summary>
+ Vertex List representation of a Graph.
+ </summary>
+	<remarks>
+ Extends the SpiderWebLibrary class graphVertexList with additional methodes linked to Grasshopper and Rhino.
+ </remarks>
+	<history>
+ [Richard Schaffranek]   22/11/2013 created
+ </history>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphProperties.#ctor">
+	<summary>
+ Construct an New Graph Properties Object
+ </summary>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphProperties.#ctor(GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphProperties)">
+	<summary>
+ Construct a New Graph Properties Object from another Graph Properties Object
+ </summary>
+	<param name="gP"></param>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphProperties.Read(GH_IO.Serialization.GH_IReader)">
+	<summary>
+ This method is called whenever the instance is required to deserialize itself. (Inherited from GH_ISerializable.)
+ </summary>
+	<returns>Returns <code>False</code></returns>
+	<remarks>Not implemented!</remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphProperties.Write(GH_IO.Serialization.GH_IWriter)">
+	<summary>
+ This method is called whenever the instance is required to serialize itself. (Inherited from GH_ISerializable.) 
+ </summary>
+	<returns>Returns <code>False</code></returns>
+	<remarks>Not implemented!</remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphProperties.CastFrom(System.Object)">
+	<summary>
+ Attempt a cast from generic object 
+ </summary>
+	<param name="source"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphProperties.CastTo``1(``0@)">
+	<summary>
+ Attempt a cast to type T 
+ </summary>
+	<typeparam name="T"></typeparam>
+	<param name="target"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphProperties.Duplicate">
+	<summary>
+ Make a complete duplicate of this instance. No shallow copies. 
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphProperties.EmitProxy">
+	<summary>
+ Create a new proxy for this instance. Return Null if this class does not support proxies. 
+ </summary>
+	<returns>Returns <code>Nothing</code></returns>
+	<remarks>Not implemented!</remarks>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphProperties.IsValid">
+	<summary>
+ Gets a value indicating whether or not the current value is valid. 
+ </summary>
+	<value></value>
+	<returns>Returns true.</returns>
+	<remarks> Graphs should always be valid, if not please contact the author.</remarks>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphProperties.IsValidWhyNot">
+	<summary>
+ Gets a string describing the state of "invalidness". If the instance is valid, then this property should return Nothing or String.Empty. 
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphProperties.ScriptVariable">
+	<summary>
+ Get the "naked" SpiderWebLibrary represnetation.
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphProperties.GHToString">
+	<summary>
+ Creates a string description of the current instance value 
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphProperties.TypeDescription">
+	<summary>
+ Gets the TypeDescription
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphProperties.TypeName">
+	<summary>
+ Gets the TypeName
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphProperties">
+ -------------------------------------------
+ Project : GH_SpiderWebLibrary
+ Class   : GH_graphProperties
+ 
+ <summary>
+ Graph Representation Properties
+ </summary>
+	<remarks>
+ Settings for the Graph Display
+ </remarks>
+	<history>
+ [Richard Schaffranek]   13/07/2015 created
+ </history>
+</member><member name="M:GH_SpiderWebLibrary.GH_compare.GH_compNumber.Compare(Grasshopper.Kernel.Types.GH_Number,Grasshopper.Kernel.Types.GH_Number)">
+	<summary>
+ Compare two GH_Number
+ </summary>
+	<param name="V1">GH_Number to compare</param>
+	<param name="V2">GH_Number to compare</param>
+	<returns>-1 if V1 is smaller than V2, 0 if they are equal, 1 if V2 is smaller than V1.</returns>
+	<remarks></remarks>
+</member><member name="T:GH_SpiderWebLibrary.GH_compare.GH_compNumber">
+ -------------------------------------------
+ Project : GH_SpiderWebLibrary
+ Class   : GH_compNumber
+ 
+ <summary>
+ Comperator for GH_Number
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   22/11/2013 created
+ </history>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphMatrix.#ctor">
+	<summary>
+  Construct a empty Graph represented by a matrix.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphMatrix.Read(GH_IO.Serialization.GH_IReader)">
+	<summary>
+ This method is called whenever the instance is required to deserialize itself. (Inherited from GH_ISerializable.)
+ </summary>
+	<returns>Returns <code>False</code></returns>
+	<remarks>Not implemented!</remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphMatrix.Write(GH_IO.Serialization.GH_IWriter)">
+	<summary>
+ This method is called whenever the instance is required to serialize itself. (Inherited from GH_ISerializable.) 
+ </summary>
+	<returns>Returns <code>False</code></returns>
+	<remarks>Not implemented!</remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphMatrix.CastFrom(System.Object)">
+	<summary>
+ Attempt a cast from generic object 
+ </summary>
+	<param name="source"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphMatrix.CastTo``1(``0@)">
+	<summary>
+ Attempt a cast to type T 
+ </summary>
+	<typeparam name="T"></typeparam>
+	<param name="target"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphMatrix.Duplicate">
+	<summary>
+ Make a complete duplicate of this instance. No shallow copies. 
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphMatrix.EmitProxy">
+	<summary>
+ Create a new proxy for this instance. Return Null if this class does not support proxies. 
+ </summary>
+	<returns>Returns <code>Nothing</code></returns>
+	<remarks>Not implemented!</remarks>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphMatrix.IsValid">
+	<summary>
+ Gets a value indicating whether or not the current value is valid. 
+ </summary>
+	<value></value>
+	<returns>Returns true.</returns>
+	<remarks> Graphs should always be valid, if not please contact the author.</remarks>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphMatrix.IsValidWhyNot">
+	<summary>
+ Gets a string describing the state of "invalidness". If the instance is valid, then this property should return Nothing or String.Empty. 
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphMatrix.ScriptVariable">
+	<summary>
+ Get the "naked" SpiderWebLibrary represnetation.
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphMatrix.ToStringGH">
+	<summary>
+ Creates a string description of the current instance value 
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphMatrix.TypeDescription">
+	<summary>
+ Gets the TypeDescription
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphMatrix.TypeName">
+	<summary>
+ Gets the TypeName
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_graphMatrix">
+ -------------------------------------------
+ Project : GH_SpiderWebLibrary
+ Class   : GH_graphMatrix
+ 
+ <summary>
+ Matrix representation of a Graph.
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   06/06/2014 created
+  [Richard Schaffranek]   16/11/2014 changed: meta.numerics -&gt; math.net
+ </history>
+</member><member name="F:GH_SpiderWebLibrary.R_Compare.R_compPolyline.tol">
+	<summary>
+ Tolerance for comparing Rhino.Geometry.Polyline
+ </summary>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.R_Compare.R_compPolyline.#ctor(System.Double)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="t">Optional, if not speciefed t = 1</param>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.R_Compare.R_compPolyline.Compare(Rhino.Geometry.Polyline,Rhino.Geometry.Polyline)">
+	<summary>
+ Compare two Rhino.Geometry.Polyline
+ </summary>
+	<param name="Pol1">Rhino.Geometry.Polyline to compare</param>
+	<param name="Pol2">Rhino.Geometry.Polyline to compare</param>
+	<returns>-1 if Pol1.BoundingBox.Min  is smaller than Pol2.BoundingBox.Min, 0 if they are equal, 1 if Pol2.BoundingBox.Min is smaller than Pol1.BoundingBox.Min.</returns>
+	<remarks>Compares Polylines based on the coordinates of Pol1.BoundingBox.Min first X then Y then Z. Uses the specified tolerance to compare the points</remarks>
+</member><member name="T:GH_SpiderWebLibrary.R_Compare.R_compPolyline">
+ -------------------------------------------
+ Project : GH_SpiderWebLibrary
+ Class   : R_compPolyline
+ 
+ <summary>
+ Comperator for Rhino.Geometry.Polyline
+ </summary>
+	<remarks>
+ Based on the minimum of the Bounding Box
+ </remarks>
+	<history>
+ [Richard Schaffranek]   22/11/2013 created
+ </history>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.#ctor">
+	<summary>
+  Construct a empty Graph represented by a list of graphVertex.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.#ctor(SpiderWebLibrary.graphRepresentaions.Graph)">
+	<summary>
+ Construct a Graph represented by a list of graphVertex, from another Graph.
+ </summary>
+	<param name="G">Object, implementing the Graph interface.</param>
+	<remarks>Computes in O(n), where n is the number of graphVertex in the Graph.</remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.Read(GH_IO.Serialization.GH_IReader)">
+	<summary>
+ This method is called whenever the instance is required to deserialize itself. (Inherited from GH_ISerializable.)
+ </summary>
+	<returns>Returns <code>False</code></returns>
+	<remarks>Not implemented!</remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.Write(GH_IO.Serialization.GH_IWriter)">
+	<summary>
+ This method is called whenever the instance is required to serialize itself. (Inherited from GH_ISerializable.) 
+ </summary>
+	<returns>Returns <code>False</code></returns>
+	<remarks>Not implemented!</remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.CastFrom(System.Object)">
+	<summary>
+ Attempt a cast from generic object 
+ </summary>
+	<param name="source"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.CastTo``1(``0@)">
+	<summary>
+ Attempt a cast to type T 
+ </summary>
+	<typeparam name="T"></typeparam>
+	<param name="target"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.Duplicate">
+	<summary>
+ Make a complete duplicate of this instance. No shallow copies. 
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.EmitProxy">
+	<summary>
+ Create a new proxy for this instance. Return Null if this class does not support proxies. 
+ </summary>
+	<returns>Returns <code>Nothing</code></returns>
+	<remarks>Not implemented!</remarks>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.IsValid">
+	<summary>
+ Gets a value indicating whether or not the current value is valid. 
+ </summary>
+	<value></value>
+	<returns>Returns true.</returns>
+	<remarks> Graphs should always be valid, if not please contact the author.</remarks>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.IsValidWhyNot">
+	<summary>
+ Gets a string describing the state of "invalidness". If the instance is valid, then this property should return Nothing or String.Empty. 
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.ScriptVariable">
+	<summary>
+ Get the "naked" SpiderWebLibrary represnetation.
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.ToStringGH">
+	<summary>
+ Creates a string description of the current instance value 
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.TypeDescription">
+	<summary>
+ Gets the TypeDescription
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.TypeName">
+	<summary>
+ Gets the TypeName
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.GraphFromDatatree(Grasshopper.Kernel.Data.GH_Structure{Grasshopper.Kernel.Types.IGH_Goo})">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.GraphFromDatatree(Grasshopper.Kernel.Data.GH_Structure{Grasshopper.Kernel.Types.IGH_Goo},Grasshopper.Kernel.Data.GH_Structure{Grasshopper.Kernel.Types.GH_Number})">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.GraphFromDatatree(Grasshopper.DataTree{System.Object})">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.GraphFromDatatree(Grasshopper.DataTree{System.Object},Grasshopper.DataTree{System.Double})">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.GraphFromLines(System.Collections.Generic.List{Rhino.Geometry.Line},System.Boolean,System.Double)">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.GraphFromLineIntersection(System.Collections.Generic.List{Rhino.Geometry.Line},System.Double)">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.GraphFromPoint(System.Collections.Generic.List{Rhino.Geometry.Point3d},System.Double,System.Double)">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.GraphFromCells(System.Collections.Generic.List{Rhino.Geometry.Curve},System.Double,System.Double,System.Boolean)">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.EdgeGraphFromMesh(Rhino.Geometry.Mesh)">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.FaceGraphFromMesh(Rhino.Geometry.Mesh)">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.dualGraphAngular(System.Collections.Generic.List{Rhino.Geometry.Point3d})">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.dualVertexGraphAngular(System.Collections.Generic.List{Rhino.Geometry.Point3d})">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.dualGraphTopological(System.Collections.Generic.List{Rhino.Geometry.Point3d},System.Double)">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.dualVertexGraphTopological(System.Collections.Generic.List{Rhino.Geometry.Point3d},System.Double)">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.parseVertexDataTree(Grasshopper.DataTree{System.Int32})">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.parseVertexDataTree(Grasshopper.Kernel.Data.GH_Structure{Grasshopper.Kernel.Types.GH_Integer})">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.parseVertexDataTree(Grasshopper.DataTree{System.Int32},Grasshopper.DataTree{System.Double},System.Int32)">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.parseVertexDataTree(Grasshopper.Kernel.Data.GH_Structure{Grasshopper.Kernel.Types.GH_Integer},Grasshopper.Kernel.Data.GH_Structure{Grasshopper.Kernel.Types.GH_Number},System.Int32)">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.parseEdgeDataTree(Grasshopper.DataTree{System.Int32})">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.parseEdgeDataTree(Grasshopper.Kernel.Data.GH_Structure{Grasshopper.Kernel.Types.GH_Integer})">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.parseEdgeDataTree(Grasshopper.DataTree{System.Int32},Grasshopper.DataTree{System.Double})">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.parseEdgeDataTree(Grasshopper.Kernel.Data.GH_Structure{Grasshopper.Kernel.Types.GH_Integer},Grasshopper.Kernel.Data.GH_Structure{Grasshopper.Kernel.Types.GH_Number})">
+	<inheritdoc/>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.EG_DATATREE">
+	<inheritdoc/>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.EC_DATATREE">
+	<inheritdoc/>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.G_DATATREE">
+	<inheritdoc/>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList.GEC_DATATREE">
+	<inheritdoc/>
+</member><member name="T:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphVertexList">
+ -------------------------------------------
+ Project : GH_SpiderWebLibrary
+ Class   : GH_GraphVertexList
+ 
+ <summary>
+ Vertex List representation of a Graph.
+ </summary>
+	<remarks>
+ Extends the SpiderWebLibrary class graphVertexList with additional methodes linked to Grasshopper and Rhino.
+ </remarks>
+	<history>
+ [Richard Schaffranek]   22/11/2013 created
+ </history>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_Graph.GraphFromDatatree(Grasshopper.Kernel.Data.GH_Structure{Grasshopper.Kernel.Types.IGH_Goo})">
+	<summary>
+ Adds the topological information contained in the Path of a DataTree to an existing Graph.
+ </summary>
+	<param name="pDT">Path information used to construct the Edges of a Graph. e.g.: {0;1} will add a graphEdge leading from graphVertex 0 to graphVertex 1.</param>
+	<remarks>Only considers Paths with a length of two.</remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_Graph.GraphFromDatatree(Grasshopper.Kernel.Data.GH_Structure{Grasshopper.Kernel.Types.IGH_Goo},Grasshopper.Kernel.Data.GH_Structure{Grasshopper.Kernel.Types.GH_Number})">
+	<summary>
+ Adds the topological information contained in the Path of a DataTree to an existing Graph.
+ </summary>
+	<param name="pDT">Path information used to construct the Edges of a Graph. e.g.: {0;1} will add a graphEdge leading from graphVertex 0 to graphVertex 1.</param>
+	<param name="gecDT">Costs of the edge</param>
+	<remarks>Only considers Paths with a length of two.</remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_Graph.GraphFromDatatree(Grasshopper.DataTree{System.Object})">
+	<summary>
+ Adds the topological information contained in the Path of a DataTree to an existing Graph.
+ </summary>
+	<param name="pDT">Path information used to construct the Edges of a Graph. e.g.: {0;1} will add a graphEdge leading from graphVertex 0 to graphVertex 1.</param>
+	<remarks>Only considers Paths with a length of two.</remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_Graph.GraphFromDatatree(Grasshopper.DataTree{System.Object},Grasshopper.DataTree{System.Double})">
+	<summary>
+ Adds the topological information contained in the Path of a DataTree to an existing Graph.
+ </summary>
+	<param name="pDT">Path information used to construct the Edges of a Graph. e.g.: {0;1} will add a graphEdge leading from graphVertex 0 to graphVertex 1.</param>
+	<param name="gecDT">Costs of the edge</param>
+	<remarks>Only considers Paths with a length of two.</remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_Graph.GraphFromLines(System.Collections.Generic.List{Rhino.Geometry.Line},System.Boolean,System.Double)">
+	<summary>
+ Adds the topological information contained in the List(of Line) to an existing Graph.
+ </summary>
+	<param name="L_List"></param>
+	<param name="undirected">If false, one edge will be added per line. 
+ The drawing direction of the line is important.</param>
+	<param name="tol">Tolerance</param>
+	<returns>Returns a List of Point3d representing the world (x,y,z) position of the graphVertex.</returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_Graph.GraphFromLineIntersection(System.Collections.Generic.List{Rhino.Geometry.Line},System.Double)">
+	<summary>
+ Creates a graph from a set of Lines. Adds an edge between two lines if they intersect.
+ </summary>
+	<param name="L_List"></param>
+	<param name="tol">Tolerance</param>
+	<returns>Returns a List of Point3d representing the world (x,y,z) position of the graphVertex.</returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_Graph.GraphFromPoint(System.Collections.Generic.List{Rhino.Geometry.Point3d},System.Double,System.Double)">
+	<summary>
+ Adds all possible connections (distance ≤ conDist) to an existing Graph.
+ </summary>
+	<param name="Vertex"></param>
+	<param name="conDist"></param>
+	<param name="tol">Tolerance</param>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_Graph.GraphFromCells(System.Collections.Generic.List{Rhino.Geometry.Curve},System.Double,System.Double,System.Boolean)">
+	<summary>
+ Adds a connection to an existing Graph when the outlines of two curves a overlapping parts.
+ </summary>
+	<param name="C_List">List of Curves</param>
+	<param name="tol"></param>
+	<returns>Returns the resorted outlines as list of polylines</returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_Graph.EdgeGraphFromMesh(Rhino.Geometry.Mesh)">
+	<summary>
+ Adds the topological information of the mesh edges to an existing Graph.
+ </summary>
+	<param name="M"></param>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_Graph.FaceGraphFromMesh(Rhino.Geometry.Mesh)">
+	<summary>
+ Adds the topological information of the mesh faces adjacencies to an existing Graph.
+ </summary>
+	<param name="M"></param>
+	<returns>Returns the centroids of the faces as List(of Point3d)</returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_Graph.dualGraphAngular(System.Collections.Generic.List{Rhino.Geometry.Point3d})">
+	<summary>
+ Convert the Graph into its dualGraph. 
+ </summary>
+	<param name="GP_L"></param>
+	<returns>Returns a List of Point3d representing the new world (x,y,z) position of the graphVertex.</returns>
+	<remarks>The costs of each Edge is defined by the angle between the original edges.</remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_Graph.dualVertexGraphAngular(System.Collections.Generic.List{Rhino.Geometry.Point3d})">
+	<summary>
+ Convert the Graph into its dualGraph and connects it to the vertices of the original Graph.
+ </summary>
+	<param name="GP_L"></param>
+	<returns>Returns a List of Point3d representing the new world (x,y,z) position of the graphVertex.</returns>
+	<remarks>The costs of Edges between the newly added vertices is defined by the angle between the original edges.
+ The costs from the old vertices to the new vertices are either set to infinity (ingoing) or 0 (outgoing).
+ </remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_Graph.dualGraphTopological(System.Collections.Generic.List{Rhino.Geometry.Point3d},System.Double)">
+	<summary>
+ Convert the Graph into its dualGraph. 
+ </summary>
+	<param name="GP_L"></param>
+	<returns>Returns a List of Point3d representing the new world (x,y,z) position of the graphVertex.</returns>
+	<remarks>The costs of each Edge is either 0 if two edges align, otherwise 1</remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_Graph.dualVertexGraphTopological(System.Collections.Generic.List{Rhino.Geometry.Point3d},System.Double)">
+	<summary>
+ Convert the Graph into its dualGraph and connects it to the vertices of the original Graph.
+ </summary>
+	<param name="GP_L"></param>
+	<returns>Returns a List of Point3d representing the new world (x,y,z) position of the graphVertex.</returns>
+	<remarks>The costs of Edges between the newly added vertices is either 0 if two edges align, otherwise 1.
+ The costs from the old vertices to the new vertices are either set to infinity (ingoing) or 0 (outgoing).
+ </remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_Graph.parseVertexDataTree(Grasshopper.DataTree{System.Int32})">
+	<summary>
+ Parses a DataTree as a Vertex List representation of a Graph.
+ </summary>
+	<param name="gDT">Vertex List representation</param>
+	<remarks>Each Branch of the DataTree (gDT) is understood as a graphVertex.
+ The elements within each Branch representing its neighbours.
+ </remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_Graph.parseVertexDataTree(Grasshopper.Kernel.Data.GH_Structure{Grasshopper.Kernel.Types.GH_Integer})">
+	<summary>
+ Parses a DataTree as a Vertex List representation of a Graph.
+ </summary>
+	<param name="gDT">Vertex List representation</param>
+	<remarks>Each Branch of the DataTree (gDT) is understood as a graphVertex.
+ The elements within each Branch representing its neighbours.
+ </remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_Graph.parseVertexDataTree(Grasshopper.DataTree{System.Int32},Grasshopper.DataTree{System.Double},System.Int32)">
+	<summary>
+ Parses a DataTree as a Vertex List representation of a Graph.
+ </summary>
+	<param name="gDT">Vertex List representation</param>
+	<param name="gecDT">Costs</param>
+	<param name="methode">0 Sum, 1 Average, 2 Max, 3 Min, 4 A, 5 B</param>
+	<remarks>Each Branch of the DataTree (gDT) is understood as a graphVertex.
+ The elements within each Branch representing its neighbours.
+ Depending on the choosen methode the costs are callculated from the DataTree gecDT.
+ The structure of gDT has to match the structure of gecDT, if not a empty Graph will be returned.
+ </remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_Graph.parseVertexDataTree(Grasshopper.Kernel.Data.GH_Structure{Grasshopper.Kernel.Types.GH_Integer},Grasshopper.Kernel.Data.GH_Structure{Grasshopper.Kernel.Types.GH_Number},System.Int32)">
+	<summary>
+ Parses a DataTree as a Vertex List representation of a Graph.
+ </summary>
+	<param name="gDT">Vertex List representation</param>
+	<param name="gecDT">Costs</param>
+	<param name="methode">0 Sum, 1 Average, 2 Max, 3 Min, 4 A, 5 B</param>
+	<remarks>Each Branch of the DataTree (gDT) is understood as a graphVertex.
+ The elements within each Branch representing its neighbours.
+ Depending on the choosen methode the costs are callculated from the DataTree gecDT.
+ The structure (pathCount and dataCount) of gDT has to match the structure of gecDT, if not a empty Graph will be returned.
+ </remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_Graph.parseEdgeDataTree(Grasshopper.DataTree{System.Int32})">
+	<summary>
+ Parses a DataTree as a Edge List representation of a Graph.
+ </summary>
+	<param name="gDT">Edge List representation</param>
+	<remarks>The length of each Branch of the DataTree (egDT) has to be 2.
+ </remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_Graph.parseEdgeDataTree(Grasshopper.Kernel.Data.GH_Structure{Grasshopper.Kernel.Types.GH_Integer})">
+	<summary>
+ Parses a DataTree as a Edge List representation of a Graph.
+ </summary>
+	<param name="gDT">Edge List representation</param>
+	<remarks>The length of each Branch of the DataTree (egDT) has to be 2</remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_Graph.parseEdgeDataTree(Grasshopper.DataTree{System.Int32},Grasshopper.DataTree{System.Double})">
+	<summary>
+ Parses a DataTree as a Edge List representation of a Graph.
+ </summary>
+	<param name="gDT">Edge List representation</param>
+	<param name="gecDT">Costs</param>
+	<remarks>The length of each Branch of the DataTree (egDT) has to be 2.
+ The structure (pathCount) of egDT has to match the structure of ecDT, if not a empty Graph will be returned.
+ </remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_Graph.parseEdgeDataTree(Grasshopper.Kernel.Data.GH_Structure{Grasshopper.Kernel.Types.GH_Integer},Grasshopper.Kernel.Data.GH_Structure{Grasshopper.Kernel.Types.GH_Number})">
+	<summary>
+ Parses a DataTree as a Edge List representation of a Graph.
+ </summary>
+	<param name="gDT">Edge List representation</param>
+	<param name="gecDT">Costs</param>
+	<remarks>The length of each Branch of the DataTree (egDT) has to be 2.
+ The structure (pathCount) of egDT has to match the structure of ecDT, if not a empty Graph will be returned.
+ </remarks>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_Graph.EG_DATATREE">
+	<summary>
+ Get the Graphs (Edge List representation) as DataTree
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_Graph.EC_DATATREE">
+	<summary>
+ Get the Graphs Costs (Edge List representation) as DataTree
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_Graph.G_DATATREE">
+	<summary>
+ Get the Graph (Vertex List representation) as DataTree
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_Graph.GEC_DATATREE">
+	<summary>
+ Get the Graphs Costs (Vertex List representation) as DataTree
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_Graph">
+ -------------------------------------------
+ Project : GH_SpiderWebLibrary
+ Class   : GH_Graph
+ 
+ <summary>
+ Interface providing methodes across different GH_graphRepresentations
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   22/11/2013 created
+ </history>
+</member><member name="P:GH_SpiderWebLibrary.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:GH_SpiderWebLibrary.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:GH_SpiderWebLibrary.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:GH_SpiderWebLibrary.GH_Clustering.GH_ClusteringHelper">
+ -------------------------------------------
+ Project : GH_SpiderWebLibrary
+ Class   : GH_agglomerativeClustering
+ 
+ <summary>
+ Clustering Helper
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   18/11/2014 created
+ </history>
+</member><member name="M:GH_SpiderWebLibrary.GH_compare.GH_compInteger.Compare(Grasshopper.Kernel.Types.GH_Integer,Grasshopper.Kernel.Types.GH_Integer)">
+	<summary>
+ Compare two GH_Integer
+ </summary>
+	<param name="V1">GH_Integer to compare</param>
+	<param name="V2">GH_Integer to compare</param>
+	<returns>-1 if V1 is smaller than V2, 0 if they are equal, 1 if V2 is smaller than V1.</returns>
+	<remarks></remarks>
+</member><member name="T:GH_SpiderWebLibrary.GH_compare.GH_compInteger">
+ -------------------------------------------
+ Project : GH_SpiderWebLibrary
+ Class   : GH_compInteger
+ 
+ <summary>
+ Comperator for GH_Integer
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ [Richard Schaffranek]   22/11/2013 created
+ </history>
+</member><member name="F:GH_SpiderWebLibrary.R_Compare.R_compPoint3d.tol">
+	<summary>
+ Tolerance for comparing Rhino.Geometry.Point3d
+ </summary>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.R_Compare.R_compPoint3d.#ctor(System.Double)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="t">Optional, if not speciefed t = 1</param>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.R_Compare.R_compPoint3d.Compare(Rhino.Geometry.Point3d,Rhino.Geometry.Point3d)">
+	<summary>
+ Compare two Rhino.Geometry.Point3d
+ </summary>
+	<param name="P1">Rhino.Geometry.Point3d to compare</param>
+	<param name="P2">Rhino.Geometry.Point3d to compare</param>
+	<returns>-1 if P1 is smaller than P2, 0 if they are equal, 1 if P2 is smaller than P1.</returns>
+	<remarks>Compares points based on their coordinates first X then Y then Z. Uses the specified tolerance to compare the points</remarks>
+</member><member name="T:GH_SpiderWebLibrary.R_Compare.R_compPoint3d">
+ -------------------------------------------
+ Project : GH_SpiderWebLibrary
+ Class   : R_compPoint3d
+ 
+ <summary>
+ Comperator for Rhino.Geometry.Point3d
+ </summary>
+	<remarks>
+ compares x y z values
+ </remarks>
+	<history>
+ [Richard Schaffranek]   22/11/2013 created
+ </history>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.#ctor">
+	<summary>
+  Construct a empty Graph represented by a list of graphEdges.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.#ctor(SpiderWebLibrary.graphRepresentaions.Graph)">
+	<summary>
+ Construct a Graph represented by a list of graphEdges, based on another Graph.
+ </summary>
+	<param name="G">Graph implementing the Graph interface.</param>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.Read(GH_IO.Serialization.GH_IReader)">
+	<summary>
+ This method is called whenever the instance is required to deserialize itself. (Inherited from GH_ISerializable.)
+ </summary>
+	<returns>Returns <code>False</code></returns>
+	<remarks>Not implemented!</remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.Write(GH_IO.Serialization.GH_IWriter)">
+	<summary>
+ This method is called whenever the instance is required to serialize itself. (Inherited from GH_ISerializable.) 
+ </summary>
+	<returns>Returns <code>False</code></returns>
+	<remarks>Not implemented!</remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.CastFrom(System.Object)">
+	<summary>
+ Attempt a cast from generic object 
+ </summary>
+	<param name="source"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.CastTo``1(``0@)">
+	<summary>
+ Attempt a cast to type T 
+ </summary>
+	<typeparam name="T"></typeparam>
+	<param name="target"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.Duplicate">
+	<summary>
+ Make a complete duplicate of this instance. No shallow copies. 
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.EmitProxy">
+	<summary>
+ Create a new proxy for this instance. Return Null if this class does not support proxies. 
+ </summary>
+	<returns>Returns <code>Nothing</code></returns>
+	<remarks>Not implemented!</remarks>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.IsValid">
+	<summary>
+ Gets a value indicating whether or not the current value is valid. 
+ </summary>
+	<value></value>
+	<returns>Returns true.</returns>
+	<remarks> Graphs should always be valid, if not please contact the author.</remarks>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.IsValidWhyNot">
+	<summary>
+ Gets a string describing the state of "invalidness". If the instance is valid, then this property should return Nothing or String.Empty. 
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.ScriptVariable">
+	<summary>
+ Get the "naked" SpiderWebLibrary represnetation.
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.ToStringGH">
+	<summary>
+ Creates a string description of the current instance value 
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.TypeDescription">
+	<summary>
+ Gets the TypeDescription
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.TypeName">
+	<summary>
+ Gets the TypeName
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.GraphFromDatatree(Grasshopper.Kernel.Data.GH_Structure{Grasshopper.Kernel.Types.IGH_Goo})">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.GraphFromDatatree(Grasshopper.Kernel.Data.GH_Structure{Grasshopper.Kernel.Types.IGH_Goo},Grasshopper.Kernel.Data.GH_Structure{Grasshopper.Kernel.Types.GH_Number})">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.GraphFromDatatree(Grasshopper.DataTree{System.Object})">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.GraphFromDatatree(Grasshopper.DataTree{System.Object},Grasshopper.DataTree{System.Double})">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.GraphFromLines(System.Collections.Generic.List{Rhino.Geometry.Line},System.Boolean,System.Double)">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.GraphFromLineIntersection(System.Collections.Generic.List{Rhino.Geometry.Line},System.Double)">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.GraphFromPoint(System.Collections.Generic.List{Rhino.Geometry.Point3d},System.Double,System.Double)">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.GraphFromCells(System.Collections.Generic.List{Rhino.Geometry.Curve},System.Double,System.Double,System.Boolean)">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.ConvertToPolyline(System.Collections.Generic.List{Rhino.Geometry.Curve})">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.getEvents(System.Collections.Generic.List{Rhino.Geometry.Polyline})">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.getVertex(System.Collections.Generic.List{Rhino.Geometry.Polyline},GH_SpiderWebLibrary.R_Compare.R_compPoint3d,System.Collections.Generic.List{Rhino.Geometry.Point3d}@,System.Collections.Generic.List{Rhino.Geometry.Polyline}@)">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.EdgeGraphFromMesh(Rhino.Geometry.Mesh)">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.FaceGraphFromMesh(Rhino.Geometry.Mesh)">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.dualGraphAngular(System.Collections.Generic.List{Rhino.Geometry.Point3d})">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.dualVertexGraphAngular(System.Collections.Generic.List{Rhino.Geometry.Point3d})">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.dualGraphTopological(System.Collections.Generic.List{Rhino.Geometry.Point3d},System.Double)">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.dualVertexGraphTopological(System.Collections.Generic.List{Rhino.Geometry.Point3d},System.Double)">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.parseVertexDataTree(Grasshopper.DataTree{System.Int32})">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.parseVertexDataTree(Grasshopper.Kernel.Data.GH_Structure{Grasshopper.Kernel.Types.GH_Integer})">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.parseVertexDataTree(Grasshopper.DataTree{System.Int32},Grasshopper.DataTree{System.Double},System.Int32)">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.parseVertexDataTree(Grasshopper.Kernel.Data.GH_Structure{Grasshopper.Kernel.Types.GH_Integer},Grasshopper.Kernel.Data.GH_Structure{Grasshopper.Kernel.Types.GH_Number},System.Int32)">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.parseEdgeDataTree(Grasshopper.DataTree{System.Int32})">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.parseEdgeDataTree(Grasshopper.Kernel.Data.GH_Structure{Grasshopper.Kernel.Types.GH_Integer})">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.parseEdgeDataTree(Grasshopper.DataTree{System.Int32},Grasshopper.DataTree{System.Double})">
+	<inheritdoc/>
+</member><member name="M:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.parseEdgeDataTree(Grasshopper.Kernel.Data.GH_Structure{Grasshopper.Kernel.Types.GH_Integer},Grasshopper.Kernel.Data.GH_Structure{Grasshopper.Kernel.Types.GH_Number})">
+	<inheritdoc/>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.EG_DATATREE">
+	<inheritdoc/>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.EC_DATATREE">
+	<inheritdoc/>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.G_DATATREE">
+	<inheritdoc/>
+</member><member name="P:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList.GEC_DATATREE">
+	<inheritdoc/>
+</member><member name="T:GH_SpiderWebLibrary.GH_graphRepresentaions.GH_GraphEdgeList">
+ -------------------------------------------
+ Project : GH_SpiderWebLibrary
+ Class   : GH_GraphEdgeList
+ 
+ <summary>
+ Edge List representation of a Graph.
+ </summary>
+	<remarks>
+ Extends the SpiderWebLibrary class graphEdgeList with additional methodes linked to Grasshopper and Rhino.
+ These function mainly help to convert from geometry to a topological representation (Graph).
+ </remarks>
+	<history>
+ [Richard Schaffranek]   22/11/2013 created
+ </history>
+</member>
+</members>
+</doc>

@@ -1,0 +1,10 @@
+C:\Users\schaffranek.GBL\Desktop\02 FORSCHUNG\10_13 SpiderWeb\05 Plugin Grashopper\SpiderWeb X.X\GraphClasses\obj\Release\ResolveAssemblyReference.cache
+C:\Users\schaffranek.GBL\Desktop\02 FORSCHUNG\10_13 SpiderWeb\05 Plugin Grashopper\SpiderWeb X.X\GraphClasses\obj\Release\GraphClasses.Resources.resources
+C:\Users\schaffranek.GBL\Desktop\02 FORSCHUNG\10_13 SpiderWeb\05 Plugin Grashopper\SpiderWeb X.X\GraphClasses\obj\Release\GenerateResource.read.1.tlog
+C:\Users\schaffranek.GBL\Desktop\02 FORSCHUNG\10_13 SpiderWeb\05 Plugin Grashopper\SpiderWeb X.X\GraphClasses\obj\Release\GenerateResource.write.1.tlog
+C:\Users\schaffranek.GBL\Desktop\02 FORSCHUNG\10_13 SpiderWeb\05 Plugin Grashopper\SpiderWeb X.X\GraphClasses\bin\Release\GraphClasses.dll
+C:\Users\schaffranek.GBL\Desktop\02 FORSCHUNG\10_13 SpiderWeb\05 Plugin Grashopper\SpiderWeb X.X\GraphClasses\bin\Release\GraphClasses.pdb
+C:\Users\schaffranek.GBL\Desktop\02 FORSCHUNG\10_13 SpiderWeb\05 Plugin Grashopper\SpiderWeb X.X\GraphClasses\bin\Release\GraphClasses.xml
+C:\Users\schaffranek.GBL\Desktop\02 FORSCHUNG\10_13 SpiderWeb\05 Plugin Grashopper\SpiderWeb X.X\GraphClasses\obj\Release\GraphClasses.dll
+C:\Users\schaffranek.GBL\Desktop\02 FORSCHUNG\10_13 SpiderWeb\05 Plugin Grashopper\SpiderWeb X.X\GraphClasses\obj\Release\GraphClasses.xml
+C:\Users\schaffranek.GBL\Desktop\02 FORSCHUNG\10_13 SpiderWeb\05 Plugin Grashopper\SpiderWeb X.X\GraphClasses\obj\Release\GraphClasses.pdb

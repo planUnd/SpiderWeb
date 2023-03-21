@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{28C0468F-42E1-4C04-8B42-9189A777CF17}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SipderWeb</RootNamespace>
+    <AssemblyName>SipderWeb</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>SipderWeb.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>SipderWeb.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GH_IO">
+      <HintPath>C:\Users\schaf\AppData\Roaming\McNeel\Rhinoceros\5.0\Plug-ins\Grasshopper (b45a29b1-4343-4035-989e-044e8580d9cf)\0.9.76.0\GH_IO.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Grasshopper">
+      <HintPath>C:\Users\schaf\AppData\Roaming\McNeel\Rhinoceros\5.0\Plug-ins\Grasshopper (b45a29b1-4343-4035-989e-044e8580d9cf)\0.9.76.0\Grasshopper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MathNet.Numerics">
+      <HintPath>C:\Libraries\MathNet\MathNet.Numerics.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="RhinoCommon, Version=5.1.30000.10, Culture=neutral, PublicKeyToken=552281e97c755530, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files\Rhinoceros 5 (64-bit)\System\RhinoCommon.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GH_Compoent\SpiderWebBasic\GH_Component_graphMatrix.vb" />
+    <Compile Include="GH_Compoent\SpiderWebBasic\GH_Component_visualGraphGrid.vb" />
+    <Compile Include="GH_Compoent\SpiderWebBasic\GH_Component_DualGraph.vb" />
+    <Compile Include="GH_Compoent\SpiderWebBasic\GH_Component_graphFromCells.vb" />
+    <Compile Include="GH_Compoent\SpiderWebBasic\GH_Component_GraphFromMesh.vb" />
+    <Compile Include="GH_Compoent\SpiderWebBasic\GH_Component_graphFromPoint.vb" />
+    <Compile Include="GH_Compoent\SpiderWebBasic\GH_Component_GraphToDataTree.vb" />
+    <Compile Include="GH_Compoent\SpiderWebBasic\GH_Component_DataTreeToGraph.vb" />
+    <Compile Include="GH_Compoent\SpiderWebClustering\GH_Component_distanceClustering.vb" />
+    <Compile Include="GH_Compoent\SpiderWebClustering\GH_Component_agglomerativeClustering.vb" />
+    <Compile Include="GH_Compoent\SpiderWebDisplay\GH_Component_DisplayVisualGraph.vb" />
+    <Compile Include="GH_Compoent\SpiderWebDisplay\GH_Component_DisplayGraph.vb" />
+    <Compile Include="GH_Compoent\SpiderWebBasic\GH_Component_graphFromLines.vb" />
+    <Compile Include="GH_Compoent\SpiderWebDisplay\GH_Component_DisplayGraphEdge.vb" />
+    <Compile Include="GH_Compoent\SpiderWebDisplay\GH_Component_DisplayGraphVertex.vb" />
+    <Compile Include="GH_Compoent\SpiderWebDisplay\GH_Component_GraphStyle.vb" />
+    <Compile Include="GH_Compoent\SpiderWebManipulation\GH_Component_SplitAt.vb" />
+    <Compile Include="GH_Compoent\SpiderWebFilter\GH_Component_NBFilters.vb" />
+    <Compile Include="GH_Compoent\SpiderWebFilter\GH_Component_PointOfIntrest.vb" />
+    <Compile Include="GH_Compoent\SpiderWebManipulation\GH_Component_findEdge.vb" />
+    <Compile Include="GH_Compoent\SpiderWebManipulation\GH_Component_mEdges.vb" />
+    <Compile Include="GH_Compoent\SpiderWebManipulation\GH_Component_mVertices.vb" />
+    <Compile Include="GH_Compoent\SpiderWebSpectralAnalysis\GH_Component_SpectralMatching.vb" />
+    <Compile Include="GH_Compoent\SpiderWebTools\GH_Component_PWP.vb" />
+    <Compile Include="GH_Compoent\SpiderWebTools\GH_Component_BFS.vb" />
+    <Compile Include="GH_Compoent\SpiderWebTools\GH_Component_EulerianPath.vb" />
+    <Compile Include="GH_Compoent\SpiderWebTools\GH_Component_MinSpannTree.vb" />
+    <Compile Include="GH_Compoent\SpiderWebTools\GH_Component_rndSGC.vb" />
+    <Compile Include="GH_Compoent\SpiderWebSpectralAnalysis\GH_Component_Eigensystem.vb" />
+    <Compile Include="GH_Compoent\SpiderWebTools\GH_Component_RSC.vb" />
+    <Compile Include="GH_Compoent\SpiderWebTools\GH_Component_SSSP.vb" />
+    <Compile Include="IGH_PARAM\GH_graphStyleParam.vb" />
+    <Compile Include="IGH_PARAM\GH_graphMatrixParam.vb" />
+    <Compile Include="IGH_PARAM\GH_visualGraphParam.vb" />
+    <Compile Include="IGH_PARAM\GH_GraphVertexListParam.vb" />
+    <Compile Include="IGH_PARAM\GH_GraphEdgeListParam.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SpiderWebAssemblyInfo.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHOICE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHOICEBETWEENPOINTS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DJIKSTRA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EulerPath.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graphFromLines.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graphFromPoints.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MAX_TREE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MIN_TREE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\removeMultiEdges.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graphFromCells-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BFS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rndSGC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graphFormDatatree-14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DisplayIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NBFilter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\POI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EdgeRep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rekrusiveShadowCasting-21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VGAGrid-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GH_SpiderWebLibrary\GH_SpiderWebLibrary.vbproj">
+      <Project>{d3b04fe4-7e4a-49e3-a666-a4ee7ecd127f}</Project>
+      <Name>GH_SpiderWebLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpiderWebLibrary\SpiderWebLibrary.vbproj">
+      <Project>{ed55014a-a75b-4a10-adda-86283157958b}</Project>
+      <Name>SpiderWebLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-37.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-39.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderWeb-42.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>Copy "$(TargetPath)" "$(TargetDir)\$(ProjectName).gha"
+Erase "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

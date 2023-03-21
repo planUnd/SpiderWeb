@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{ED55014A-A75B-4A10-ADDA-86283157958B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SpiderWebLibrary</RootNamespace>
+    <AssemblyName>SpiderWebLibrary</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SpiderWebLibrary.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SpiderWebLibrary.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MathNet.Numerics">
+      <HintPath>C:\Libraries\MathNet\MathNet.Numerics.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="00_graphElements\compare\gEmaxComp.vb" />
+    <Compile Include="00_graphElements\compare\gVdegrreComp.vb" />
+    <Compile Include="00_graphElements\compare\gEComp.vb" />
+    <Compile Include="00_graphElements\compare\gEminCost.vb" />
+    <Compile Include="00_graphElements\compare\gVComp.vb" />
+    <Compile Include="00_graphElements\compare\gVrndComp.vb" />
+    <Compile Include="00_graphElements\interfaces\graphElement.vb" />
+    <Compile Include="01_graph\graphMatrix.vb" />
+    <Compile Include="01_graph\interfaces\Graph.vb" />
+    <Compile Include="00_graphElements\graphVertex.vb" />
+    <Compile Include="01_graph\graphVertexList.vb" />
+    <Compile Include="01_graph\graphEdgeList.vb" />
+    <Compile Include="00_graphElements\graphEdge.vb" />
+    <Compile Include="02_graphTools\BFS.vb" />
+    <Compile Include="02_graphTools\DFS.vb" />
+    <Compile Include="02_graphTools\interfaces\graphTree.vb" />
+    <Compile Include="02_graphTools\graphColoring.vb" />
+    <Compile Include="02_graphTools\SearchGraph.vb" />
+    <Compile Include="02_graphTools\spectralGraph.vb" />
+    <Compile Include="02_graphTools\SSSP.vb" />
+    <Compile Include="02_graphTools\eulerianPath.vb" />
+    <Compile Include="02_graphTools\minSpanningTree.vb" />
+    <Compile Include="01_graph\visualGraph.vb" />
+    <Compile Include="03_clustering\agglomerativeClustering\completeLinkage.vb" />
+    <Compile Include="03_clustering\agglomerativeClustering\agglomerativeClustering.vb" />
+    <Compile Include="03_clustering\agglomerativeClustering\WARD.vb" />
+    <Compile Include="03_clustering\agglomerativeClustering\UPGMC.vb" />
+    <Compile Include="03_clustering\agglomerativeClustering\WPGMA.vb" />
+    <Compile Include="03_clustering\agglomerativeClustering\UPGMA.vb" />
+    <Compile Include="03_clustering\agglomerativeClustering\singleLinkage.vb" />
+    <Compile Include="03_clustering\distanceClustering\chiSquaredDistance.vb" />
+    <Compile Include="03_clustering\distanceClustering\earthMoverDistance.vb" />
+    <Compile Include="03_clustering\distanceClustering\pearsonDistance.vb" />
+    <Compile Include="03_clustering\distanceClustering\gowerDistance.vb" />
+    <Compile Include="03_clustering\distanceClustering\manhattenDistance.vb" />
+    <Compile Include="03_clustering\distanceClustering\distanceClustering.vb" />
+    <Compile Include="03_clustering\distanceClustering\euclidianDistance.vb" />
+    <Compile Include="03_clustering\hyperplaneHashing.vb" />
+    <Compile Include="03_clustering\munkers.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
